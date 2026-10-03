@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaguguta Agrifarm — Daily Rainfall Report</title>
+<style>
+  body { font-family: "Times New Roman", Times, serif; }
+</style>
+</head>
+<body>
+
+<h2>Daily Rainfall Report</h2>
+<p id="generated-at"></p>
+<p id="report-date"></p>
+<hr>
+
+<p><b>Observed</b></p>
+<div id="observed"></div>
+<hr>
+
+<p><b>Forecast</b></p>
+<div id="forecast"></div>
+<hr>
+
+<p><b>Commentary</b></p>
+<p id="claude-narrative"></p>
+<hr>
+
+<p><a href="index.html">← Back</a></p>
+<hr>
+<p style="font-size:0.8em;">Copyright &copy; 2026 <b>Gianidel Ltd.</b> Internal website. Updated daily at 07:00 EAT.</p>
+
+<script>
+fetch("data.json")
+  .then(r => r.json())
+  .then(data => {
+
+    // Generated at
+    if (data.generated_at) {
+      const d = new Date(data.generated_at);
+      document.getElementById("generated-at").textContent = "Last updated: " + d.toUTCString();
+    }
+
+    const y = data.yesterday;
+    const observedEl = document.getElementById("observed");
+
+    if (!y) {
+      observedEl.innerHTML = "<p>No data available.</p>";
+    } else {
+      document.getElementById("report-date").textContent = "Date: " + y.date;
+
+      const rainy = y.total_mm > 0.28;
+
+      let html = "<p>Rainfall: " + (y.total_mm || 0).toFixed(2) + " mm";
+      if (y.source === "manual") html += " (manual" + (y.note ? " — " + y.note : "") + ")";
+      html += "</p>";
+
+      if (rainy) {
+        html += "<p>Tips: " + (y.tip_count !== null ? y.tip_count : "—") + "</p>";
+
+        if (y.max_instant_mm_h !== null && y.max_instant_mm_h !== undefined)
+          html += "<p>Max instantaneous rate: " + y.max_instant_mm_h.toFixed(0) + " mm/h</p>";
+
+        if (y.max_5min_mm !== null && y.max_5min_mm !== undefined)
+          html += "<p>Max 5-min: " + y.max_5min_mm.toFixed(2) + " mm</p>";
+
+        if (y.max_10min_mm !== null && y.max_10min_mm !== undefined)
+          html += "<p>Max 10-min: " + y.max_10min_mm.toFixed(2) + " mm</p>";
+
+        if (y.max_60min_mm !== null && y.max_60min_mm !== undefined)
+          html += "<p>Max 1-hour: " + y.max_60min_mm.toFixed(2) + " mm</p>";
+
+        if (y.max_120min_mm !== null && y.max_120min_mm !== undefined)
+          html += "<p>Max 2-hour: " + y.max_120min_mm.toFixed(2) + " mm</p>";
+      }
+
+      observedEl.innerHTML = html;
+    }
+
+    // Forecast — tomorrow and day after from ensemble
+    const forecastEl = document.getElementById("forecast");
+    const ens = data.ensemble_2day;
+    if (ens && ens.length > 0) {
+      let html = "";
+      ens.forEach(d => {
+        html += "<p>" + d.label + " (" + d.date + "): " +
+          (d.mean_mm || 0).toFixed(1) + " mm, 75th perc: " +
+          (d.p75_mm !== null ? d.p75_mm.toFixed(1) : "—") + " mm</p>";
+      });
+      forecastEl.innerHTML = html;
+    } else {
+      forecastEl.innerHTML = "<p>No forecast data available.</p>";
+    }
+
+    // Commentary
+    const narrative = data.daily_narrative;
+    const narrativeEl = document.getElementById("claude-narrative");
+    if (narrative) {
+      narrativeEl.textContent = narrative;
+    } else {
+      narrativeEl.style.fontStyle = "italic";
+      narrativeEl.textContent = "No commentary generated for today.";
+    }
+
+  })
+  .catch(err => {
+    document.body.innerHTML += "<p>Error loading data.json: " + err.message + "</p>";
+  });
+</script>
+
+</body>
+</html>
