@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T22:21:29.323Z",
+  "generated_at": "2026-10-03T22:25:45.968Z",
   "today": "2026-10-04",
   "yesterday": {
     "date": "2026-10-03",
@@ -169,9 +169,22 @@
         "weathercode": null
       }
     ],
-    "fetched_at": "2026-10-03T22:21:28.850Z"
+    "fetched_at": "2026-10-03T22:25:45.525Z"
   },
-  "ensemble_2day": null,
+  "ensemble_2day": [
+    {
+      "label": "Tomorrow",
+      "date": "2026-10-04",
+      "mean_mm": 2.3,
+      "p75_mm": 3.2
+    },
+    {
+      "label": "Day after",
+      "date": "2026-10-05",
+      "mean_mm": 6.5,
+      "p75_mm": 8
+    }
+  ],
   "daily_narrative": "DUMMY NARRATIVE — Claude not called in test.",
   "dekadal_narrative": null
 }
