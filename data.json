@@ -1,0 +1,190 @@
+{
+  "generated_at": "2026-10-03T22:10:07.107Z",
+  "today": "2026-10-04",
+  "yesterday": {
+    "date": "2026-10-03",
+    "total_mm": 18.76,
+    "tip_count": 67,
+    "source": "gauge",
+    "max_instant_mm_h": 168,
+    "max_5min_mm": 2.52,
+    "max_10min_mm": 3.92,
+    "max_60min_mm": 12.04,
+    "max_120min_mm": 15.68
+  },
+  "daily_history": [
+    {
+      "date": "2026-10-03",
+      "total_mm": 18.76,
+      "tip_count": 67,
+      "source": "gauge",
+      "max_instant_mm_h": 168,
+      "max_5min_mm": 2.52,
+      "max_10min_mm": 3.92,
+      "max_60min_mm": 12.04,
+      "max_120min_mm": 15.68
+    }
+  ],
+  "current_dekad": {
+    "dekad": "2026-10-D1",
+    "days": [
+      "2026-10-03"
+    ],
+    "total_mm": 18.76,
+    "rainy_days": 1,
+    "heaviest_day_mm": 18.76,
+    "heaviest_day_date": "2026-10-03",
+    "max_instant_mm_h": 168,
+    "max_instant_date": "2026-10-03",
+    "max_5min_mm": 2.52,
+    "max_5min_date": "2026-10-03",
+    "max_10min_mm": 3.92,
+    "max_10min_date": "2026-10-03",
+    "max_60min_mm": 12.04,
+    "max_60min_date": "2026-10-03",
+    "max_120min_mm": 15.68,
+    "max_120min_date": "2026-10-03",
+    "has_manual": false
+  },
+  "previous_dekad": null,
+  "all_dekadals": [
+    {
+      "dekad": "2026-10-D1",
+      "days": [
+        "2026-10-03"
+      ],
+      "total_mm": 18.76,
+      "rainy_days": 1,
+      "heaviest_day_mm": 18.76,
+      "heaviest_day_date": "2026-10-03",
+      "max_instant_mm_h": 168,
+      "max_instant_date": "2026-10-03",
+      "max_5min_mm": 2.52,
+      "max_5min_date": "2026-10-03",
+      "max_10min_mm": 3.92,
+      "max_10min_date": "2026-10-03",
+      "max_60min_mm": 12.04,
+      "max_60min_date": "2026-10-03",
+      "max_120min_mm": 15.68,
+      "max_120min_date": "2026-10-03",
+      "has_manual": false
+    }
+  ],
+  "forecast": {
+    "daily": [
+      {
+        "date": "2026-10-03",
+        "precip_mm": 3,
+        "precip_prob": 94,
+        "weathercode": 53
+      },
+      {
+        "date": "2026-10-04",
+        "precip_mm": 1.7,
+        "precip_prob": 94,
+        "weathercode": 53
+      },
+      {
+        "date": "2026-10-05",
+        "precip_mm": 5.1,
+        "precip_prob": 100,
+        "weathercode": 80
+      },
+      {
+        "date": "2026-10-06",
+        "precip_mm": 5.5,
+        "precip_prob": 95,
+        "weathercode": 80
+      },
+      {
+        "date": "2026-10-07",
+        "precip_mm": 9.8,
+        "precip_prob": 78,
+        "weathercode": 55
+      },
+      {
+        "date": "2026-10-08",
+        "precip_mm": 39.4,
+        "precip_prob": 98,
+        "weathercode": 81
+      },
+      {
+        "date": "2026-10-09",
+        "precip_mm": 19,
+        "precip_prob": 100,
+        "weathercode": 80
+      },
+      {
+        "date": "2026-10-10",
+        "precip_mm": 18,
+        "precip_prob": 89,
+        "weathercode": 80
+      },
+      {
+        "date": "2026-10-11",
+        "precip_mm": 8.6,
+        "precip_prob": 84,
+        "weathercode": 53
+      },
+      {
+        "date": "2026-10-12",
+        "precip_mm": 31.6,
+        "precip_prob": 94,
+        "weathercode": 81
+      },
+      {
+        "date": "2026-10-13",
+        "precip_mm": 17.4,
+        "precip_prob": 87,
+        "weathercode": 55
+      },
+      {
+        "date": "2026-10-14",
+        "precip_mm": 20,
+        "precip_prob": 86,
+        "weathercode": 80
+      },
+      {
+        "date": "2026-10-15",
+        "precip_mm": 8.2,
+        "precip_prob": 82,
+        "weathercode": 53
+      },
+      {
+        "date": "2026-10-16",
+        "precip_mm": 0,
+        "precip_prob": 75,
+        "weathercode": 3
+      },
+      {
+        "date": "2026-10-17",
+        "precip_mm": 2.7,
+        "precip_prob": 59,
+        "weathercode": 51
+      },
+      {
+        "date": "2026-10-18",
+        "precip_mm": null,
+        "precip_prob": 63,
+        "weathercode": null
+      }
+    ],
+    "fetched_at": "2026-10-03T22:10:06.600Z"
+  },
+  "ensemble_2day": [
+    {
+      "label": "Tomorrow",
+      "date": "2026-10-04",
+      "mean_mm": 2.1,
+      "p75_mm": 1.7
+    },
+    {
+      "label": "Day after",
+      "date": "2026-10-05",
+      "mean_mm": 6.1,
+      "p75_mm": 10.5
+    }
+  ],
+  "daily_narrative": "DUMMY NARRATIVE — Claude not called in test.",
+  "dekadal_narrative": null
+}
