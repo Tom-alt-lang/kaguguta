@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaguguta Agrifarm — Monthly Rainfall</title>
+<style>
+  body { font-family: "Times New Roman", Times, serif; }
+  p { margin: 0; }
+  hr { margin-top: 18px; margin-bottom: 18px; }
+  b { display: block; margin-top: 14px; }
+</style>
+</head>
+<body>
+
+<h2>Monthly Rainfall</h2>
+<p id="generated-at"></p>
+<hr>
+
+<div id="monthly-data"></div>
+
+<hr>
+<p><a href="index.html">← Back</a></p>
+<hr>
+<p style="font-size:0.8em;">Copyright &copy; 2026 <b>Kaguguta agrifarm Ltd.</b> Internal website.</p>
+
+<script>
+function formatDateShort(dateStr) {
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const parts  = dateStr.split("-");
+  return parseInt(parts[2]) + " " + months[parseInt(parts[1]) - 1];
+}
+function formatMonth(monthStr) {
+  const months = ["January","February","March","April","May","June",
+    "July","August","September","October","November","December"];
+  const parts  = monthStr.split("-");
+  return months[parseInt(parts[1]) - 1] + " " + parts[0];
+}
+function formatDateLong(isoStr) {
+  const d = new Date(isoStr);
+  return d.getDate() + " " + ["January","February","March","April","May","June",
+    "July","August","September","October","November","December"][d.getMonth()] + " " + d.getFullYear();
+}
+
+fetch("data.json")
+  .then(r => r.json())
+  .then(data => {
+
+    if (data.generated_at) {
+      document.getElementById("generated-at").textContent =
+        "Last updated: " + formatDateLong(data.generated_at);
+    }
+
+    const monthlyEl = document.getElementById("monthly-data");
+
+    if (!data.monthly || data.monthly.length === 0) {
+      monthlyEl.innerHTML = "<p>No monthly data available.</p>";
+      return;
+    }
+
+    // Most recent month first
+    const months = [...data.monthly].reverse();
+    let html = "";
+
+    months.forEach((mo, idx) => {
+      html += "<b>" + formatMonth(mo.month) + "</b>";
+      html += "<p>Total rainfall: " + mo.total_mm.toFixed(1) + " mm</p>";
+      html += "<p>Rainy days (≥0.28 mm): " + mo.rainy_days_028 + "</p>";
+      html += "<p>Rainy days (>1 mm): " + mo.rainy_days_1mm + "</p>";
+      html += "<p>Heaviest day: " + (mo.heaviest_day_date ? formatDateShort(mo.heaviest_day_date) : "—") +
+        " — " + (mo.heaviest_day_mm || 0).toFixed(2) + " mm</p>";
+
+      if (mo.dekads && Object.keys(mo.dekads).length > 0) {
+        ["D1","D2","D3"].forEach(label => {
+          if (mo.dekads[label]) {
+            const d = mo.dekads[label];
+            html += "<p>" + label + ": " + d.total_mm.toFixed(1) + " mm (" +
+              d.rainy_days_028 + " days ≥0.28mm, " + d.rainy_days_1mm + " days >1mm)</p>";
+          }
+        });
+      }
+
+      if (mo.max_instant_mm_h !== null && mo.max_instant_mm_h !== undefined)
+        html += "<p>Max instantaneous rate: " + mo.max_instant_mm_h + " mm/h at " +
+          (mo.max_instant_time || "—") + " on " + (mo.max_instant_date ? formatDateShort(mo.max_instant_date) : "—") + "</p>";
+      if (mo.max_5min_mm !== null && mo.max_5min_mm !== undefined)
+        html += "<p>Max 5-min: " + mo.max_5min_mm.toFixed(2) + " mm (" +
+          (mo.max_5min_start || "—") + "–" + (mo.max_5min_end || "—") + " on " +
+          (mo.max_5min_date ? formatDateShort(mo.max_5min_date) : "—") + ")</p>";
+      if (mo.max_10min_mm !== null && mo.max_10min_mm !== undefined)
+        html += "<p>Max 10-min: " + mo.max_10min_mm.toFixed(2) + " mm (" +
+          (mo.max_10min_start || "—") + "–" + (mo.max_10min_end || "—") + " on " +
+          (mo.max_10min_date ? formatDateShort(mo.max_10min_date) : "—") + ")</p>";
+      if (mo.max_60min_mm !== null && mo.max_60min_mm !== undefined)
+        html += "<p>Max 1-hour: " + mo.max_60min_mm.toFixed(2) + " mm (" +
+          (mo.max_60min_start || "—") + "–" + (mo.max_60min_end || "—") + " on " +
+          (mo.max_60min_date ? formatDateShort(mo.max_60min_date) : "—") + ")</p>";
+      if (mo.max_120min_mm !== null && mo.max_120min_mm !== undefined)
+        html += "<p>Max 2-hour: " + mo.max_120min_mm.toFixed(2) + " mm (" +
+          (mo.max_120min_start || "—") + "–" + (mo.max_120min_end || "—") + " on " +
+          (mo.max_120min_date ? formatDateShort(mo.max_120min_date) : "—") + ")</p>";
+
+      if (mo.has_manual) html += "<p style='font-size:0.85em; color:#888;'>Note: includes manual entries.</p>";
+
+      if (idx < months.length - 1) html += "<hr>";
+    });
+
+    monthlyEl.innerHTML = html;
+
+  })
+  .catch(err => {
+    document.body.innerHTML += "<p>Error loading data.json: " + err.message + "</p>";
+  });
+</script>
+</body>
+</html>
