@@ -1,190 +1,442 @@
 {
-  "generated_at": "2026-10-03T22:27:27.403Z",
+  "generated_at": "2026-10-04T02:28:22.327Z",
   "today": "2026-10-04",
   "yesterday": {
     "date": "2026-10-03",
-    "total_mm": 18.76,
-    "tip_count": 67,
+    "total_mm": 0.28,
+    "tip_count": 1,
     "source": "gauge",
-    "max_instant_mm_h": 168,
-    "max_5min_mm": 2.52,
-    "max_10min_mm": 3.92,
-    "max_60min_mm": 12.04,
-    "max_120min_mm": 15.68
+    "max_instant_mm_h": null,
+    "max_5min_mm": null,
+    "max_10min_mm": null,
+    "max_60min_mm": null,
+    "max_120min_mm": null
   },
   "daily_history": [
     {
-      "date": "2026-10-03",
-      "total_mm": 18.76,
-      "tip_count": 67,
+      "date": "2026-09-09",
+      "total_mm": 8.68,
+      "tip_count": 31,
       "source": "gauge",
-      "max_instant_mm_h": 168,
+      "max_instant_mm_h": 42,
+      "max_5min_mm": 1.68,
+      "max_10min_mm": 1.96,
+      "max_60min_mm": 3.08,
+      "max_120min_mm": 5.6
+    },
+    {
+      "date": "2026-09-10",
+      "total_mm": 0.84,
+      "tip_count": 3,
+      "source": "gauge",
+      "max_instant_mm_h": 10,
+      "max_5min_mm": 0.56,
+      "max_10min_mm": 0.56,
+      "max_60min_mm": 0.56,
+      "max_120min_mm": 0.56
+    },
+    {
+      "date": "2026-09-11",
+      "total_mm": 27.72,
+      "tip_count": 99,
+      "source": "gauge",
+      "max_instant_mm_h": 126,
+      "max_5min_mm": 4.48,
+      "max_10min_mm": 4.48,
+      "max_60min_mm": 5.88,
+      "max_120min_mm": 8.12
+    },
+    {
+      "date": "2026-09-12",
+      "total_mm": 10.92,
+      "tip_count": 39,
+      "source": "gauge",
+      "max_instant_mm_h": 504,
+      "max_5min_mm": 8.4,
+      "max_10min_mm": 9.52,
+      "max_60min_mm": 9.52,
+      "max_120min_mm": 9.52
+    },
+    {
+      "date": "2026-09-13",
+      "total_mm": 0.28,
+      "tip_count": 1,
+      "source": "gauge",
+      "max_instant_mm_h": null,
+      "max_5min_mm": null,
+      "max_10min_mm": null,
+      "max_60min_mm": null,
+      "max_120min_mm": null
+    },
+    {
+      "date": "2026-09-14",
+      "total_mm": 1.12,
+      "tip_count": 4,
+      "source": "gauge",
+      "max_instant_mm_h": 3,
+      "max_5min_mm": 0.28,
+      "max_10min_mm": 0.56,
+      "max_60min_mm": 0.56,
+      "max_120min_mm": 0.84
+    },
+    {
+      "date": "2026-09-15",
+      "total_mm": 0.28,
+      "tip_count": 1,
+      "source": "gauge",
+      "max_instant_mm_h": null,
+      "max_5min_mm": null,
+      "max_10min_mm": null,
+      "max_60min_mm": null,
+      "max_120min_mm": null
+    },
+    {
+      "date": "2026-09-16",
+      "total_mm": 0.28,
+      "tip_count": 1,
+      "source": "gauge",
+      "max_instant_mm_h": null,
+      "max_5min_mm": null,
+      "max_10min_mm": null,
+      "max_60min_mm": null,
+      "max_120min_mm": null
+    },
+    {
+      "date": "2026-09-17",
+      "total_mm": 1.4,
+      "tip_count": 5,
+      "source": "gauge",
+      "max_instant_mm_h": 10,
+      "max_5min_mm": 0.56,
+      "max_10min_mm": 0.56,
+      "max_60min_mm": 0.56,
+      "max_120min_mm": 1.12
+    },
+    {
+      "date": "2026-09-18",
+      "total_mm": 24.08,
+      "tip_count": 86,
+      "source": "gauge",
+      "max_instant_mm_h": 63,
+      "max_5min_mm": 3.36,
+      "max_10min_mm": 5.32,
+      "max_60min_mm": 11.2,
+      "max_120min_mm": 11.2
+    },
+    {
+      "date": "2026-09-19",
+      "total_mm": 1.4,
+      "tip_count": 5,
+      "source": "gauge",
+      "max_instant_mm_h": 4,
+      "max_5min_mm": 0.56,
+      "max_10min_mm": 0.56,
+      "max_60min_mm": 0.84,
+      "max_120min_mm": 1.12
+    },
+    {
+      "date": "2026-09-20",
+      "total_mm": 16.8,
+      "tip_count": 60,
+      "source": "gauge",
+      "max_instant_mm_h": 56,
       "max_5min_mm": 2.52,
-      "max_10min_mm": 3.92,
-      "max_60min_mm": 12.04,
-      "max_120min_mm": 15.68
+      "max_10min_mm": 3.08,
+      "max_60min_mm": 3.92,
+      "max_120min_mm": 5.32
+    },
+    {
+      "date": "2026-09-21",
+      "total_mm": 4.76,
+      "tip_count": 17,
+      "source": "gauge",
+      "max_instant_mm_h": 50,
+      "max_5min_mm": 2.52,
+      "max_10min_mm": 3.08,
+      "max_60min_mm": 3.64,
+      "max_120min_mm": 3.92
+    },
+    {
+      "date": "2026-09-22",
+      "total_mm": 0.28,
+      "tip_count": 1,
+      "source": "gauge",
+      "max_instant_mm_h": null,
+      "max_5min_mm": null,
+      "max_10min_mm": null,
+      "max_60min_mm": null,
+      "max_120min_mm": null
+    },
+    {
+      "date": "2026-09-23",
+      "total_mm": 1.12,
+      "tip_count": 4,
+      "source": "gauge",
+      "max_instant_mm_h": 15,
+      "max_5min_mm": 0.84,
+      "max_10min_mm": 0.84,
+      "max_60min_mm": 1.12,
+      "max_120min_mm": 1.12
+    },
+    {
+      "date": "2026-09-24",
+      "total_mm": 0.28,
+      "tip_count": 1,
+      "source": "gauge",
+      "max_instant_mm_h": null,
+      "max_5min_mm": null,
+      "max_10min_mm": null,
+      "max_60min_mm": null,
+      "max_120min_mm": null
+    },
+    {
+      "date": "2026-09-27",
+      "total_mm": 20.16,
+      "tip_count": 72,
+      "source": "gauge",
+      "max_instant_mm_h": 53,
+      "max_5min_mm": 2.52,
+      "max_10min_mm": 3.08,
+      "max_60min_mm": 5.04,
+      "max_120min_mm": 8.68
+    },
+    {
+      "date": "2026-09-28",
+      "total_mm": 0.84,
+      "tip_count": 3,
+      "source": "gauge",
+      "max_instant_mm_h": 504,
+      "max_5min_mm": 0.56,
+      "max_10min_mm": 0.56,
+      "max_60min_mm": 0.56,
+      "max_120min_mm": 0.56
+    },
+    {
+      "date": "2026-09-29",
+      "total_mm": 0.28,
+      "tip_count": 1,
+      "source": "gauge",
+      "max_instant_mm_h": null,
+      "max_5min_mm": null,
+      "max_10min_mm": null,
+      "max_60min_mm": null,
+      "max_120min_mm": null
+    },
+    {
+      "date": "2026-09-30",
+      "total_mm": 0.28,
+      "tip_count": 1,
+      "source": "gauge",
+      "max_instant_mm_h": null,
+      "max_5min_mm": null,
+      "max_10min_mm": null,
+      "max_60min_mm": null,
+      "max_120min_mm": null
+    },
+    {
+      "date": "2026-10-01",
+      "total_mm": 1.12,
+      "tip_count": 4,
+      "source": "gauge",
+      "max_instant_mm_h": 34,
+      "max_5min_mm": 0.56,
+      "max_10min_mm": 0.56,
+      "max_60min_mm": 0.84,
+      "max_120min_mm": 0.84
+    },
+    {
+      "date": "2026-10-02",
+      "total_mm": 0.56,
+      "tip_count": 2,
+      "source": "gauge",
+      "max_instant_mm_h": 0,
+      "max_5min_mm": 0.28,
+      "max_10min_mm": 0.28,
+      "max_60min_mm": 0.28,
+      "max_120min_mm": 0.28
+    },
+    {
+      "date": "2026-10-03",
+      "total_mm": 0.28,
+      "tip_count": 1,
+      "source": "gauge",
+      "max_instant_mm_h": null,
+      "max_5min_mm": null,
+      "max_10min_mm": null,
+      "max_60min_mm": null,
+      "max_120min_mm": null
     }
   ],
   "current_dekad": {
     "dekad": "2026-10-D1",
     "days": [
+      "2026-10-01",
+      "2026-10-02",
       "2026-10-03"
     ],
-    "total_mm": 18.76,
-    "rainy_days": 1,
-    "heaviest_day_mm": 18.76,
-    "heaviest_day_date": "2026-10-03",
-    "max_instant_mm_h": 168,
-    "max_instant_date": "2026-10-03",
-    "max_5min_mm": 2.52,
-    "max_5min_date": "2026-10-03",
-    "max_10min_mm": 3.92,
-    "max_10min_date": "2026-10-03",
-    "max_60min_mm": 12.04,
-    "max_60min_date": "2026-10-03",
-    "max_120min_mm": 15.68,
-    "max_120min_date": "2026-10-03",
+    "total_mm": 1.96,
+    "rainy_days": 3,
+    "heaviest_day_mm": 1.12,
+    "heaviest_day_date": "2026-10-01",
+    "max_instant_mm_h": 34,
+    "max_instant_date": "2026-10-01",
+    "max_5min_mm": 0.56,
+    "max_5min_date": "2026-10-01",
+    "max_10min_mm": 0.56,
+    "max_10min_date": "2026-10-01",
+    "max_60min_mm": 0.84,
+    "max_60min_date": "2026-10-01",
+    "max_120min_mm": 0.84,
+    "max_120min_date": "2026-10-01",
     "has_manual": false
   },
-  "previous_dekad": null,
+  "previous_dekad": {
+    "dekad": "2026-09-D3",
+    "days": [
+      "2026-09-21",
+      "2026-09-22",
+      "2026-09-23",
+      "2026-09-24",
+      "2026-09-27",
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30"
+    ],
+    "total_mm": 28,
+    "rainy_days": 8,
+    "heaviest_day_mm": 20.16,
+    "heaviest_day_date": "2026-09-27",
+    "max_instant_mm_h": 504,
+    "max_instant_date": "2026-09-28",
+    "max_5min_mm": 2.52,
+    "max_5min_date": "2026-09-21",
+    "max_10min_mm": 3.08,
+    "max_10min_date": "2026-09-21",
+    "max_60min_mm": 5.04,
+    "max_60min_date": "2026-09-27",
+    "max_120min_mm": 8.68,
+    "max_120min_date": "2026-09-27",
+    "has_manual": false
+  },
   "all_dekadals": [
+    {
+      "dekad": "2026-09-D1",
+      "days": [
+        "2026-09-09",
+        "2026-09-10"
+      ],
+      "total_mm": 9.52,
+      "rainy_days": 2,
+      "heaviest_day_mm": 8.68,
+      "heaviest_day_date": "2026-09-09",
+      "max_instant_mm_h": 42,
+      "max_instant_date": "2026-09-09",
+      "max_5min_mm": 1.68,
+      "max_5min_date": "2026-09-09",
+      "max_10min_mm": 1.96,
+      "max_10min_date": "2026-09-09",
+      "max_60min_mm": 3.08,
+      "max_60min_date": "2026-09-09",
+      "max_120min_mm": 5.6,
+      "max_120min_date": "2026-09-09",
+      "has_manual": false
+    },
+    {
+      "dekad": "2026-09-D2",
+      "days": [
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-20"
+      ],
+      "total_mm": 84.28,
+      "rainy_days": 10,
+      "heaviest_day_mm": 27.72,
+      "heaviest_day_date": "2026-09-11",
+      "max_instant_mm_h": 504,
+      "max_instant_date": "2026-09-12",
+      "max_5min_mm": 8.4,
+      "max_5min_date": "2026-09-12",
+      "max_10min_mm": 9.52,
+      "max_10min_date": "2026-09-12",
+      "max_60min_mm": 11.2,
+      "max_60min_date": "2026-09-18",
+      "max_120min_mm": 11.2,
+      "max_120min_date": "2026-09-18",
+      "has_manual": false
+    },
+    {
+      "dekad": "2026-09-D3",
+      "days": [
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-27",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30"
+      ],
+      "total_mm": 28,
+      "rainy_days": 8,
+      "heaviest_day_mm": 20.16,
+      "heaviest_day_date": "2026-09-27",
+      "max_instant_mm_h": 504,
+      "max_instant_date": "2026-09-28",
+      "max_5min_mm": 2.52,
+      "max_5min_date": "2026-09-21",
+      "max_10min_mm": 3.08,
+      "max_10min_date": "2026-09-21",
+      "max_60min_mm": 5.04,
+      "max_60min_date": "2026-09-27",
+      "max_120min_mm": 8.68,
+      "max_120min_date": "2026-09-27",
+      "has_manual": false
+    },
     {
       "dekad": "2026-10-D1",
       "days": [
+        "2026-10-01",
+        "2026-10-02",
         "2026-10-03"
       ],
-      "total_mm": 18.76,
-      "rainy_days": 1,
-      "heaviest_day_mm": 18.76,
-      "heaviest_day_date": "2026-10-03",
-      "max_instant_mm_h": 168,
-      "max_instant_date": "2026-10-03",
-      "max_5min_mm": 2.52,
-      "max_5min_date": "2026-10-03",
-      "max_10min_mm": 3.92,
-      "max_10min_date": "2026-10-03",
-      "max_60min_mm": 12.04,
-      "max_60min_date": "2026-10-03",
-      "max_120min_mm": 15.68,
-      "max_120min_date": "2026-10-03",
+      "total_mm": 1.96,
+      "rainy_days": 3,
+      "heaviest_day_mm": 1.12,
+      "heaviest_day_date": "2026-10-01",
+      "max_instant_mm_h": 34,
+      "max_instant_date": "2026-10-01",
+      "max_5min_mm": 0.56,
+      "max_5min_date": "2026-10-01",
+      "max_10min_mm": 0.56,
+      "max_10min_date": "2026-10-01",
+      "max_60min_mm": 0.84,
+      "max_60min_date": "2026-10-01",
+      "max_120min_mm": 0.84,
+      "max_120min_date": "2026-10-01",
       "has_manual": false
     }
   ],
-  "forecast": {
-    "daily": [
-      {
-        "date": "2026-10-03",
-        "precip_mm": 3,
-        "precip_prob": 94,
-        "weathercode": 53
-      },
-      {
-        "date": "2026-10-04",
-        "precip_mm": 1.7,
-        "precip_prob": 94,
-        "weathercode": 53
-      },
-      {
-        "date": "2026-10-05",
-        "precip_mm": 5.1,
-        "precip_prob": 100,
-        "weathercode": 80
-      },
-      {
-        "date": "2026-10-06",
-        "precip_mm": 5.5,
-        "precip_prob": 95,
-        "weathercode": 80
-      },
-      {
-        "date": "2026-10-07",
-        "precip_mm": 9.8,
-        "precip_prob": 78,
-        "weathercode": 55
-      },
-      {
-        "date": "2026-10-08",
-        "precip_mm": 39.4,
-        "precip_prob": 98,
-        "weathercode": 81
-      },
-      {
-        "date": "2026-10-09",
-        "precip_mm": 19,
-        "precip_prob": 100,
-        "weathercode": 80
-      },
-      {
-        "date": "2026-10-10",
-        "precip_mm": 18,
-        "precip_prob": 89,
-        "weathercode": 80
-      },
-      {
-        "date": "2026-10-11",
-        "precip_mm": 8.6,
-        "precip_prob": 84,
-        "weathercode": 53
-      },
-      {
-        "date": "2026-10-12",
-        "precip_mm": 31.6,
-        "precip_prob": 94,
-        "weathercode": 81
-      },
-      {
-        "date": "2026-10-13",
-        "precip_mm": 17.4,
-        "precip_prob": 87,
-        "weathercode": 55
-      },
-      {
-        "date": "2026-10-14",
-        "precip_mm": 20,
-        "precip_prob": 86,
-        "weathercode": 80
-      },
-      {
-        "date": "2026-10-15",
-        "precip_mm": 8.2,
-        "precip_prob": 82,
-        "weathercode": 53
-      },
-      {
-        "date": "2026-10-16",
-        "precip_mm": 0,
-        "precip_prob": 75,
-        "weathercode": 3
-      },
-      {
-        "date": "2026-10-17",
-        "precip_mm": 2.7,
-        "precip_prob": 59,
-        "weathercode": 51
-      },
-      {
-        "date": "2026-10-18",
-        "precip_mm": null,
-        "precip_prob": 63,
-        "weathercode": null
-      }
-    ],
-    "fetched_at": "2026-10-03T22:27:26.668Z"
-  },
+  "forecast": null,
   "ensemble_2day": [
     {
       "label": "Tomorrow",
       "date": "2026-10-04",
-      "mean_mm": 2.3,
-      "p75_mm": 3.2
+      "mean_mm": 3,
+      "p75_mm": 3.8
     },
     {
       "label": "Day after",
       "date": "2026-10-05",
-      "mean_mm": 6.5,
-      "p75_mm": 8
+      "mean_mm": 6.8,
+      "p75_mm": 8.7
     }
   ],
-  "daily_narrative": "DUMMY NARRATIVE — Claude not called in test.",
   "dekadal_narrative": null
 }
