@@ -70,7 +70,6 @@ fetch("data.json")
       if (y.source === "manual") html += " (manual" + (y.note ? " — " + y.note : "") + ")";
       html += "</p>";
       if (rainy) {
-        html += "<p>Tips: " + (y.tip_count !== null ? y.tip_count : "—") + "</p>";
         if (y.max_instant_mm_h !== null && y.max_instant_mm_h !== undefined)
           html += "<p>Max instantaneous rate: " + y.max_instant_mm_h + " mm/h at " + (y.max_instant_time || "—") + "</p>";
         if (y.max_5min_mm !== null && y.max_5min_mm !== undefined)
