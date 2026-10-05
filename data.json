@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T16:04:08.742Z",
+  "generated_at": "2026-10-05T16:13:32.255Z",
   "today": "2026-10-05",
   "yesterday": {
     "date": "2026-10-04",
@@ -1018,10 +1018,9 @@
       }
     ],
     "model": "ecmwf_ifs025",
-    "fetched_at": "2026-10-05T16:03:57.909Z",
+    "fetched_at": "2026-10-05T16:13:12.208Z",
     "from_cache": false
   },
   "ensemble_2day": null,
-  "daily_narrative": null,
-  "dekadal_narrative": null
+  "dekadal_narrative": "**Kaguguta Agrifarm (Kilifi County) Weather Bulletin, Sep-D3 2026 (21–30 September)**\n\nKaguguta Agrifarm recorded 37.7mm of rain in the dekad ending 30 September, with 8 rainy days at or above 0.28mm and 3 days above 1mm. Two events accounted for most of the total. Rainfall on 27 September reached 20.16mm, the heaviest day of the dekad, and 21 September added 15.00mm. The 27 September rain peaked at an instantaneous rate of 53 mm/h at 08:42, and the strongest hour (5.04mm) came later, between 11:16 and 12:16. The dekad total compares with 9.5mm in Sep-D1, but Sep-D2 has no valid total (NaN), so no ranking among September's dekads is possible. Forecast guidance for 5–14 October totals 141.0mm, led by 30.0mm on 13 October. \nThe Kenya Meteorological Service expects moderate rains in Mombasa, Kilifi and Kwale, mainly in the afternoons and at night, from Sunday to Thursday.\n \nThe seasonal outlook also puts coastal counties including Kilifi on course for higher-than-normal rainfall in October."
 }
