@@ -18,7 +18,6 @@
 <p id="report-date"></p>
 <hr>
 
-<b>Observed</b>
 <div id="observed"></div>
 <hr>
 
@@ -32,7 +31,7 @@
 
 <p><a href="index.html">← Back</a></p>
 <hr>
-<p style="font-size:0.8em;">Copyright &copy; 2026 <b>Kaguguta agrifarm Ltd.</b> Internal website.</p>
+<p style="font-size:0.8em;">Copyright &copy; 2026 <span style="font-weight:bold;">Kaguguta agrifarm Ltd.</span> Internal website.</p>
 
 <script>
 function formatDate(dateStr) {
@@ -120,4 +119,125 @@ fetch("data.json")
 </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaguguta Agrifarm — Daily Rainfall Report</title>
+<style>
+  body { font-family: "Times New Roman", Times, serif; }
+  p { margin: 0; }
+  hr { margin-top: 18px; margin-bottom: 18px; }
+  b { display: block; margin-top: 14px; }
+</style>
+</head>
+<body>
+
+<h2>Daily Rainfall Report</h2>
+<p id="generated-at"></p>
+<p id="report-date"></p>
+<hr>
+
+<b>Observed</b>
+<div id="observed"></div>
+<hr>
+
+<b>Forecast</b>
+<div id="forecast"></div>
+<hr>
+
+<b>Commentary</b>
+<p id="claude-narrative"></p>
+<hr>
+
+<p><a href="index.html">← Back</a></p>
+<hr>
+<p style="font-size:0.8em;">Copyright &copy; 2026 <span style="font-weight:bold;">Kaguguta agrifarm Ltd.</span> Internal website.</p>
+
+<script>
+function formatDate(dateStr) {
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const parts  = dateStr.split("-");
+  return parseInt(parts[2]) + " " + months[parseInt(parts[1]) - 1] + " " + parts[0];
+}
+function formatDateShort(dateStr) {
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const parts  = dateStr.split("-");
+  return parseInt(parts[2]) + " " + months[parseInt(parts[1]) - 1];
+}
+function formatDateLong(isoStr) {
+  const d = new Date(isoStr);
+  return d.getDate() + " " + ["January","February","March","April","May","June",
+    "July","August","September","October","November","December"][d.getMonth()] + " " + d.getFullYear();
+}
+
+fetch("data.json")
+  .then(r => r.json())
+  .then(data => {
+
+    if (data.generated_at) {
+      document.getElementById("generated-at").textContent =
+        "Last updated: " + formatDateLong(data.generated_at);
+    }
+
+    const y = data.yesterday;
+    const observedEl = document.getElementById("observed");
+
+    if (!y) {
+      observedEl.innerHTML = "<p>No data available.</p>";
+    } else {
+      document.getElementById("report-date").textContent = "Date: " + formatDate(y.date);
+      const rainy = y.total_mm > 0.28;
+      let html = "<p>Rainfall: " + (y.total_mm || 0).toFixed(2) + " mm";
+      if (y.source === "manual") html += " (manual" + (y.note ? " — " + y.note : "") + ")";
+      html += "</p>";
+      if (rainy) {
+        html += "<p>Tips: " + (y.tip_count !== null ? y.tip_count : "—") + "</p>";
+        if (y.max_instant_mm_h !== null && y.max_instant_mm_h !== undefined)
+          html += "<p>Max instantaneous rate: " + y.max_instant_mm_h + " mm/h at " + (y.max_instant_time || "—") + "</p>";
+        if (y.max_5min_mm !== null && y.max_5min_mm !== undefined)
+          html += "<p>Max 5-min: " + y.max_5min_mm.toFixed(2) + " mm (" + (y.max_5min_start || "—") + "–" + (y.max_5min_end || "—") + ")</p>";
+        if (y.max_10min_mm !== null && y.max_10min_mm !== undefined)
+          html += "<p>Max 10-min: " + y.max_10min_mm.toFixed(2) + " mm (" + (y.max_10min_start || "—") + "–" + (y.max_10min_end || "—") + ")</p>";
+        if (y.max_60min_mm !== null && y.max_60min_mm !== undefined)
+          html += "<p>Max 1-hour: " + y.max_60min_mm.toFixed(2) + " mm (" + (y.max_60min_start || "—") + "–" + (y.max_60min_end || "—") + ")</p>";
+        if (y.max_120min_mm !== null && y.max_120min_mm !== undefined)
+          html += "<p>Max 2-hour: " + y.max_120min_mm.toFixed(2) + " mm (" + (y.max_120min_start || "—") + "–" + (y.max_120min_end || "—") + ")</p>";
+      }
+      observedEl.innerHTML = html;
+    }
+
+    const forecastEl = document.getElementById("forecast");
+    const ens = data.ensemble_2day;
+    if (ens && ens.length > 0) {
+      let html = "";
+      ens.forEach(e => {
+        html += "<p>" + formatDateShort(e.date) + ": " +
+          (e.mean_mm || 0).toFixed(1) + " mm, 75th perc: " +
+          (e.p75_mm !== null ? e.p75_mm.toFixed(1) : "—") + " mm</p>";
+      });
+      if (data.forecast && data.forecast.from_cache) {
+        html += "<p style='font-size:0.85em; color:#888;'>Forecast from " + formatDateLong(data.forecast.fetched_at) + " (cached).</p>";
+      }
+      forecastEl.innerHTML = html;
+    } else {
+      forecastEl.innerHTML = "<p>No forecast data available.</p>";
+    }
+
+    const narrative = data.daily_narrative;
+    const narrativeEl = document.getElementById("claude-narrative");
+    if (narrative) {
+      narrativeEl.textContent = narrative;
+    } else {
+      narrativeEl.style.fontStyle = "italic";
+      narrativeEl.textContent = "No commentary generated for today.";
+    }
+
+  })
+  .catch(err => {
+    document.body.innerHTML += "<p>Error loading data.json: " + err.message + "</p>";
+  });
+</script>
+</body>
 </html>
