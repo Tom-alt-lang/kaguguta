@@ -23,6 +23,7 @@
 <p id="rainy-days-028"></p>
 <p id="rainy-days-1mm"></p>
 <p id="heaviest-day"></p>
+<p id="month-running-total"></p>
 
 <b>Daily breakdown</b>
 <div id="daily-breakdown"></div>
@@ -32,14 +33,9 @@
 <div id="intensity-peaks"></div>
 <hr>
 
-<b>Monthly summary</b>
-<div id="monthly-summary"></div>
-<hr>
-
-<b>Forecast — next dekad (Open-Meteo deterministic)</b>
+<b>Forecast — next dekad (ECMWF deterministic)</b>
 <div id="forecast-days"></div>
 <p id="forecast-total"></p>
-<p id="forecast-heavy"></p>
 <hr>
 
 <b>Commentary</b>
@@ -49,7 +45,7 @@
 <p><a href="chart/dekadal_chart.jpg" target="_blank">Annual dekadal chart</a></p>
 <p><a href="index.html">← Back</a></p>
 <hr>
-<p style="font-size:0.8em;">Copyright &copy; 2026 <b>Kaguguta agrifarm Ltd.</b> Internal website. </p>
+<p style="font-size:0.8em;">Copyright &copy; 2026 <span style="font-weight:bold;">Kaguguta agrifarm Ltd.</span> Internal website.</p>
 
 <script>
 function formatDate(dateStr) {
@@ -98,12 +94,22 @@ fetch("data.json")
     document.getElementById("total-rainfall").textContent =
       "Total rainfall: " + (dk.total_mm || 0).toFixed(2) + " mm";
     document.getElementById("rainy-days-028").textContent =
-      "Rainy days (≥0.28 mm): " + dk.rainy_days_028 + " of " + (dk.days ? dk.days.length : "—");
+      "Rainy days: " + dk.rainy_days_028;
     document.getElementById("rainy-days-1mm").textContent =
-      "Rainy days (>1 mm): " + dk.rainy_days_1mm + " of " + (dk.days ? dk.days.length : "—");
+      "Rainy days (>1 mm): " + dk.rainy_days_1mm;
     document.getElementById("heaviest-day").textContent =
       "Heaviest day: " + (dk.heaviest_day_date ? formatDateShort(dk.heaviest_day_date) : "—") +
       " — " + (dk.heaviest_day_mm || 0).toFixed(2) + " mm";
+
+    // Month running total — single line, pulled from the monthly summary
+    const monthRunningEl = document.getElementById("month-running-total");
+    if (data.monthly && data.monthly.length > 0) {
+      const currentMonth = dk.dekad.slice(0, 7);
+      const mo = data.monthly.find(m => m.month === currentMonth);
+      if (mo) {
+        monthRunningEl.textContent = formatMonth(mo.month) + " running total: " + mo.total_mm.toFixed(1) + " mm";
+      }
+    }
 
     // Daily breakdown
     const breakdownEl = document.getElementById("daily-breakdown");
@@ -122,19 +128,19 @@ fetch("data.json")
       }
     }
 
-    // Intensity peaks
+    // Intensity peaks — "at X on Y" style throughout, no parentheses
     const intensityEl = document.getElementById("intensity-peaks");
     const metrics = [
       { label: "Max instantaneous rate", val: "max_instant_mm_h", unit: "mm/h",
         time: d => d.max_instant_time ? " at " + d.max_instant_time + " on " + formatDateShort(d.max_instant_date) : "" },
       { label: "Max 5-min",  val: "max_5min_mm",  unit: "mm",
-        time: d => d.max_5min_start  ? " (" + d.max_5min_start  + "–" + d.max_5min_end  + " on " + formatDateShort(d.max_5min_date)  + ")" : "" },
+        time: d => d.max_5min_start  ? " at " + d.max_5min_start  + "–" + d.max_5min_end  + " on " + formatDateShort(d.max_5min_date)  : "" },
       { label: "Max 10-min", val: "max_10min_mm", unit: "mm",
-        time: d => d.max_10min_start ? " (" + d.max_10min_start + "–" + d.max_10min_end + " on " + formatDateShort(d.max_10min_date) + ")" : "" },
+        time: d => d.max_10min_start ? " at " + d.max_10min_start + "–" + d.max_10min_end + " on " + formatDateShort(d.max_10min_date) : "" },
       { label: "Max 1-hour", val: "max_60min_mm", unit: "mm",
-        time: d => d.max_60min_start ? " (" + d.max_60min_start + "–" + d.max_60min_end + " on " + formatDateShort(d.max_60min_date) + ")" : "" },
+        time: d => d.max_60min_start ? " at " + d.max_60min_start + "–" + d.max_60min_end + " on " + formatDateShort(d.max_60min_date) : "" },
       { label: "Max 2-hour", val: "max_120min_mm", unit: "mm",
-        time: d => d.max_120min_start ? " (" + d.max_120min_start + "–" + d.max_120min_end + " on " + formatDateShort(d.max_120min_date) + ")" : "" },
+        time: d => d.max_120min_start ? " at " + d.max_120min_start + "–" + d.max_120min_end + " on " + formatDateShort(d.max_120min_date) : "" },
     ];
     let hasIntensity = false;
     metrics.forEach(m => {
@@ -150,56 +156,20 @@ fetch("data.json")
       intensityEl.innerHTML = "<p>No intensity data available (dry dekad or manual entries only).</p>";
     }
 
-    // Monthly summary
-    const monthlyEl = document.getElementById("monthly-summary");
-    if (data.monthly && data.monthly.length > 0) {
-      const currentMonth = dk.dekad.slice(0, 7);
-      const mo = data.monthly.find(m => m.month === currentMonth);
-      if (mo) {
-        let html = "";
-        html += "<p>" + formatMonth(mo.month) + " running total: " + mo.total_mm.toFixed(1) + " mm</p>";
-        html += "<p>Rainy days this month (≥0.28 mm): " + mo.rainy_days_028 + "</p>";
-        html += "<p>Rainy days this month (>1 mm): " + mo.rainy_days_1mm + "</p>";
-        html += "<p>Heaviest day this month: " + (mo.heaviest_day_date ? formatDateShort(mo.heaviest_day_date) : "—") + " — " + mo.heaviest_day_mm.toFixed(2) + " mm</p>";
-        if (mo.dekads) {
-          ["D1","D2","D3"].forEach(dk_label => {
-            if (mo.dekads[dk_label]) {
-              const d = mo.dekads[dk_label];
-              html += "<p>" + dk_label + ": " + d.total_mm.toFixed(1) + " mm (" + d.rainy_days_028 + " days ≥0.28mm, " + d.rainy_days_1mm + " days >1mm)</p>";
-            }
-          });
-        }
-        monthlyEl.innerHTML = html;
-      } else {
-        monthlyEl.innerHTML = "<p>No monthly data available.</p>";
-      }
-    } else {
-      monthlyEl.innerHTML = "<p>No monthly data available.</p>";
-    }
-
     // Forecast
     const forecastEl = document.getElementById("forecast-days");
     if (data.forecast && data.forecast.daily && data.forecast.daily.length > 0) {
       const nextDekad = data.forecast.daily.slice(1, 11);
       let total = 0;
-      const heavyDays = [];
       nextDekad.forEach(d => {
         const mm = d.precip_mm || 0;
         total += mm;
-        heavyDays.push({ date: d.date, mm });
         const p = document.createElement("p");
         p.textContent = formatDateShort(d.date) + ": " + mm.toFixed(1) + " mm";
         forecastEl.appendChild(p);
       });
       document.getElementById("forecast-total").textContent =
         "Forecast dekadal total: " + total.toFixed(1) + " mm";
-      heavyDays.sort((a, b) => b.mm - a.mm);
-      const top3 = heavyDays.slice(0, 3).filter(d => d.mm > 0);
-      if (top3.length > 0) {
-        document.getElementById("forecast-heavy").textContent =
-          "Heaviest day" + (top3.length > 1 ? "s" : "") + ": " +
-          top3.map(d => formatDateShort(d.date) + " (" + d.mm.toFixed(1) + " mm)").join(", ");
-      }
       if (data.forecast.from_cache) {
         forecastEl.innerHTML += "<p style='font-size:0.85em; color:#888;'>Forecast from " + formatDateLong(data.forecast.fetched_at) + " (cached).</p>";
       }
