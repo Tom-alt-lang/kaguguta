@@ -88,8 +88,9 @@ fetch("data.json")
     const ens = data.ensemble_2day;
     if (ens && ens.length > 0) {
       let html = "";
-      ens.forEach(e => {
-        html += "<p>" + formatDateShort(e.date) + ": " +
+      ens.forEach((e, idx) => {
+        const label = idx === 0 ? "Tomorrow (" + formatDateShort(e.date) + ")" : formatDateShort(e.date);
+        html += "<p>" + label + ": " +
           (e.mean_mm || 0).toFixed(1) + " mm, 75th perc: " +
           (e.p75_mm !== null ? e.p75_mm.toFixed(1) : "—") + " mm</p>";
       });
@@ -117,3 +118,4 @@ fetch("data.json")
 </script>
 </body>
 </html>
+
