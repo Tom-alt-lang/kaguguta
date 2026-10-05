@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T16:13:32.255Z",
+  "generated_at": "2026-10-05T16:24:37.910Z",
   "today": "2026-10-05",
   "yesterday": {
     "date": "2026-10-04",
@@ -84,7 +84,7 @@
     },
     {
       "date": "2026-09-12",
-      "total_mm": null,
+      "total_mm": 1.12,
       "tip_count": 25,
       "source": "manual",
       "max_instant_mm_h": null,
@@ -732,9 +732,9 @@
         "2026-09-19",
         "2026-09-20"
       ],
-      "total_mm": null,
-      "rainy_days_028": 9,
-      "rainy_days_1mm": 6,
+      "total_mm": 74.48,
+      "rainy_days_028": 10,
+      "rainy_days_1mm": 7,
       "heaviest_day_mm": 27.72,
       "heaviest_day_date": "2026-09-11",
       "max_instant_mm_h": 126,
@@ -839,9 +839,9 @@
   "monthly": [
     {
       "month": "2026-09",
-      "total_mm": null,
-      "rainy_days_028": 19,
-      "rainy_days_1mm": 10,
+      "total_mm": 121.68,
+      "rainy_days_028": 20,
+      "rainy_days_1mm": 11,
       "heaviest_day_mm": 27.72,
       "heaviest_day_date": "2026-09-11",
       "max_instant_mm_h": 126,
@@ -870,9 +870,9 @@
           "rainy_days_1mm": 1
         },
         "D2": {
-          "total_mm": null,
-          "rainy_days_028": 9,
-          "rainy_days_1mm": 6
+          "total_mm": 74.48,
+          "rainy_days_028": 10,
+          "rainy_days_1mm": 7
         },
         "D3": {
           "total_mm": 37.68,
@@ -880,7 +880,8 @@
           "rainy_days_1mm": 3
         }
       },
-      "has_manual": true
+      "has_manual": true,
+      "summary": "Kaguguta Agrifarm recorded 121.7mm of rain in September 2026, and 58.7mm of it (about 48%) fell in the five days from 17 to 21 Sep. The most concentrated three-day spell, 18–20 Sep, brought 42.3mm. Five days exceeded 10mm and three exceeded 20mm (27.7mm on 11 Sep, 24.1mm on 18 Sep and 20.2mm on 27 Sep), with 11 Sep the heaviest day of the month. Rain was recorded on 20 days, every day from 9 to 30 Sep except 25 and 26 Sep, but only 11 days exceeded 1mm. The daily record has no entries before 9 Sep, and the second dekad (11–20 Sep) accounted for 74.5mm of the monthly total.\n\n\nFEWS NET's September regional monitor described the Indian Ocean Dipole as positively neutral at +0.25°C and expected to warm, which it said would reinforce the wet signal over eastern parts of the region\n ahead of the October–December short rains."
     },
     {
       "month": "2026-10",
@@ -923,25 +924,25 @@
       {
         "date": "2026-10-04",
         "precip_mm": 2.3,
-        "precip_prob": 37,
+        "precip_prob": 85,
         "weathercode": 51
       },
       {
         "date": "2026-10-05",
         "precip_mm": 5.5,
-        "precip_prob": 98,
+        "precip_prob": 100,
         "weathercode": 55
       },
       {
         "date": "2026-10-06",
         "precip_mm": 2.8,
-        "precip_prob": 96,
+        "precip_prob": 87,
         "weathercode": 53
       },
       {
         "date": "2026-10-07",
         "precip_mm": 0.7,
-        "precip_prob": 69,
+        "precip_prob": 50,
         "weathercode": 51
       },
       {
@@ -959,55 +960,55 @@
       {
         "date": "2026-10-10",
         "precip_mm": 19.9,
-        "precip_prob": 87,
+        "precip_prob": 95,
         "weathercode": 63
       },
       {
         "date": "2026-10-11",
         "precip_mm": 17.4,
-        "precip_prob": 82,
+        "precip_prob": 96,
         "weathercode": 61
       },
       {
         "date": "2026-10-12",
         "precip_mm": 25,
-        "precip_prob": 95,
+        "precip_prob": 97,
         "weathercode": 81
       },
       {
         "date": "2026-10-13",
         "precip_mm": 30,
-        "precip_prob": 91,
+        "precip_prob": 96,
         "weathercode": 81
       },
       {
         "date": "2026-10-14",
         "precip_mm": 4,
-        "precip_prob": 85,
+        "precip_prob": 82,
         "weathercode": 51
       },
       {
         "date": "2026-10-15",
         "precip_mm": 2.8,
-        "precip_prob": 73,
+        "precip_prob": 82,
         "weathercode": 51
       },
       {
         "date": "2026-10-16",
         "precip_mm": 3.6,
-        "precip_prob": 78,
+        "precip_prob": 80,
         "weathercode": 53
       },
       {
         "date": "2026-10-17",
         "precip_mm": 2.6,
-        "precip_prob": 75,
+        "precip_prob": 69,
         "weathercode": 51
       },
       {
         "date": "2026-10-18",
         "precip_mm": 35.2,
-        "precip_prob": null,
+        "precip_prob": 65,
         "weathercode": 63
       },
       {
@@ -1018,9 +1019,10 @@
       }
     ],
     "model": "ecmwf_ifs025",
-    "fetched_at": "2026-10-05T16:13:12.208Z",
+    "fetched_at": "2026-10-05T16:24:22.371Z",
     "from_cache": false
   },
   "ensemble_2day": null,
-  "dekadal_narrative": "**Kaguguta Agrifarm (Kilifi County) Weather Bulletin, Sep-D3 2026 (21–30 September)**\n\nKaguguta Agrifarm recorded 37.7mm of rain in the dekad ending 30 September, with 8 rainy days at or above 0.28mm and 3 days above 1mm. Two events accounted for most of the total. Rainfall on 27 September reached 20.16mm, the heaviest day of the dekad, and 21 September added 15.00mm. The 27 September rain peaked at an instantaneous rate of 53 mm/h at 08:42, and the strongest hour (5.04mm) came later, between 11:16 and 12:16. The dekad total compares with 9.5mm in Sep-D1, but Sep-D2 has no valid total (NaN), so no ranking among September's dekads is possible. Forecast guidance for 5–14 October totals 141.0mm, led by 30.0mm on 13 October. \nThe Kenya Meteorological Service expects moderate rains in Mombasa, Kilifi and Kwale, mainly in the afternoons and at night, from Sunday to Thursday.\n \nThe seasonal outlook also puts coastal counties including Kilifi on course for higher-than-normal rainfall in October."
+  "daily_narrative": null,
+  "dekadal_narrative": "**Kaguguta Agrifarm weather station, Kilifi County, 5 October 2026**\n\nKaguguta Agrifarm recorded 37.7 mm of rain in the third dekad of September (21–30 Sep), with 8 rainy days at or above 0.28 mm and 3 days above 1 mm. The total was about half of the 74.5 mm logged in Sep-D2 and well above the 9.5 mm in Sep-D1, making it the second-wettest of the three September dekads in the station record. A single event on 27 September, which brought 20.2 mm, accounted for more than half of the dekadal total. Rainfall rates peaked at 53 mm/h at 08:42 that day, and the heaviest hour (5.04 mm) came later, between 11:16 and 12:16. The Kenya Meteorological Service Authority had \nforecast light showers for Mombasa, Kwale, Lamu and Kilifi over 26–30 September\n, so the 27 September total was heavier than that guidance suggested. Oct-D1 has so far produced 2.2 mm over 4 rainy days, and the station's forecast calls for 141.0 mm over the next dekad, with the largest daily amount, 30.0 mm, on 13 October. That forecast is nearly double the highest dekadal total in the station's four-dekad record. It is consistent with KMSA's outlook, which says \nabove-average rainfall is likely in Kwale, Mombasa, Kilifi, Lamu\n and other counties in October."
 }
