@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T22:56:28.259Z",
+  "generated_at": "2026-10-05T02:28:26.835Z",
   "today": "2026-10-05",
   "yesterday": {
     "date": "2026-10-04",
@@ -922,264 +922,42 @@
       "has_manual": true
     }
   ],
-  "monthly": [
-    {
-      "month": "2026-09",
-      "total_mm": 121.8,
-      "rainy_days_028": 20,
-      "rainy_days_1mm": 11,
-      "heaviest_day_mm": 27.72,
-      "heaviest_day_date": "2026-09-11",
-      "max_instant_mm_h": 504,
-      "max_instant_date": "2026-09-12",
-      "max_instant_time": "17:36",
-      "max_5min_mm": 8.4,
-      "max_5min_date": "2026-09-12",
-      "max_5min_start": "17:36",
-      "max_5min_end": "17:41",
-      "max_10min_mm": 9.52,
-      "max_10min_date": "2026-09-12",
-      "max_10min_start": "17:36",
-      "max_10min_end": "17:46",
-      "max_60min_mm": 11.2,
-      "max_60min_date": "2026-09-18",
-      "max_60min_start": "00:08",
-      "max_60min_end": "01:08",
-      "max_120min_mm": 11.2,
-      "max_120min_date": "2026-09-18",
-      "max_120min_start": "00:08",
-      "max_120min_end": "02:08",
-      "dekads": {
-        "D1": {
-          "total_mm": 9.52,
-          "rainy_days_028": 2,
-          "rainy_days_1mm": 1
-        },
-        "D2": {
-          "total_mm": 84.28,
-          "rainy_days_028": 10,
-          "rainy_days_1mm": 7
-        },
-        "D3": {
-          "total_mm": 28,
-          "rainy_days_028": 8,
-          "rainy_days_1mm": 3
-        }
-      },
-      "has_manual": false
-    },
-    {
-      "month": "2026-10",
-      "total_mm": 2.24,
-      "rainy_days_028": 4,
-      "rainy_days_1mm": 1,
-      "heaviest_day_mm": 1.12,
-      "heaviest_day_date": "2026-10-01",
-      "max_instant_mm_h": 34,
-      "max_instant_date": "2026-10-01",
-      "max_instant_time": "07:57",
-      "max_5min_mm": 0.56,
-      "max_5min_date": "2026-10-01",
-      "max_5min_start": "07:57",
-      "max_5min_end": "08:02",
-      "max_10min_mm": 0.56,
-      "max_10min_date": "2026-10-01",
-      "max_10min_start": "07:57",
-      "max_10min_end": "08:07",
-      "max_60min_mm": 0.84,
-      "max_60min_date": "2026-10-01",
-      "max_60min_start": "07:43",
-      "max_60min_end": "08:43",
-      "max_120min_mm": 0.84,
-      "max_120min_date": "2026-10-01",
-      "max_120min_start": "07:43",
-      "max_120min_end": "09:43",
-      "dekads": {
-        "D1": {
-          "total_mm": 2.24,
-          "rainy_days_028": 4,
-          "rainy_days_1mm": 1
-        }
-      },
-      "has_manual": false
-    },
-    {
-      "month": "Fri Oct",
-      "total_mm": 0,
-      "rainy_days_028": 0,
-      "rainy_days_1mm": 0,
-      "heaviest_day_mm": 0,
-      "heaviest_day_date": null,
-      "max_instant_mm_h": null,
-      "max_instant_date": null,
-      "max_instant_time": null,
-      "max_5min_mm": null,
-      "max_5min_date": null,
-      "max_5min_start": null,
-      "max_5min_end": null,
-      "max_10min_mm": null,
-      "max_10min_date": null,
-      "max_10min_start": null,
-      "max_10min_end": null,
-      "max_60min_mm": null,
-      "max_60min_date": null,
-      "max_60min_start": null,
-      "max_60min_end": null,
-      "max_120min_mm": null,
-      "max_120min_date": null,
-      "max_120min_start": null,
-      "max_120min_end": null,
-      "dekads": {
-        "D1": {
-          "total_mm": 0,
-          "rainy_days_028": 0,
-          "rainy_days_1mm": 0
-        }
-      },
-      "has_manual": true
-    },
-    {
-      "month": "Mon Sep",
-      "total_mm": 15,
-      "rainy_days_028": 1,
-      "rainy_days_1mm": 1,
-      "heaviest_day_mm": 15,
-      "heaviest_day_date": "Mon Sep 21 2026 00:00:00 GMT+0200 (Central European Summer Time)",
-      "max_instant_mm_h": null,
-      "max_instant_date": null,
-      "max_instant_time": null,
-      "max_5min_mm": null,
-      "max_5min_date": null,
-      "max_5min_start": null,
-      "max_5min_end": null,
-      "max_10min_mm": null,
-      "max_10min_date": null,
-      "max_10min_start": null,
-      "max_10min_end": null,
-      "max_60min_mm": null,
-      "max_60min_date": null,
-      "max_60min_start": null,
-      "max_60min_end": null,
-      "max_120min_mm": null,
-      "max_120min_date": null,
-      "max_120min_start": null,
-      "max_120min_end": null,
-      "dekads": {
-        "D3": {
-          "total_mm": 15,
-          "rainy_days_028": 1,
-          "rainy_days_1mm": 1
-        }
-      },
-      "has_manual": true
-    },
-    {
-      "month": "Sat Oct",
-      "total_mm": 0,
-      "rainy_days_028": 0,
-      "rainy_days_1mm": 0,
-      "heaviest_day_mm": 0,
-      "heaviest_day_date": null,
-      "max_instant_mm_h": null,
-      "max_instant_date": null,
-      "max_instant_time": null,
-      "max_5min_mm": null,
-      "max_5min_date": null,
-      "max_5min_start": null,
-      "max_5min_end": null,
-      "max_10min_mm": null,
-      "max_10min_date": null,
-      "max_10min_start": null,
-      "max_10min_end": null,
-      "max_60min_mm": null,
-      "max_60min_date": null,
-      "max_60min_start": null,
-      "max_60min_end": null,
-      "max_120min_mm": null,
-      "max_120min_date": null,
-      "max_120min_start": null,
-      "max_120min_end": null,
-      "dekads": {
-        "D1": {
-          "total_mm": 0,
-          "rainy_days_028": 0,
-          "rainy_days_1mm": 0
-        }
-      },
-      "has_manual": true
-    },
-    {
-      "month": "Sun Oct",
-      "total_mm": 0,
-      "rainy_days_028": 0,
-      "rainy_days_1mm": 0,
-      "heaviest_day_mm": 0,
-      "heaviest_day_date": null,
-      "max_instant_mm_h": null,
-      "max_instant_date": null,
-      "max_instant_time": null,
-      "max_5min_mm": null,
-      "max_5min_date": null,
-      "max_5min_start": null,
-      "max_5min_end": null,
-      "max_10min_mm": null,
-      "max_10min_date": null,
-      "max_10min_start": null,
-      "max_10min_end": null,
-      "max_60min_mm": null,
-      "max_60min_date": null,
-      "max_60min_start": null,
-      "max_60min_end": null,
-      "max_120min_mm": null,
-      "max_120min_date": null,
-      "max_120min_start": null,
-      "max_120min_end": null,
-      "dekads": {
-        "D1": {
-          "total_mm": 0,
-          "rainy_days_028": 0,
-          "rainy_days_1mm": 0
-        }
-      },
-      "has_manual": true
-    }
-  ],
-  "forecast": {
+  "monthly": {
     "daily": [
       {
         "date": "2026-10-04",
-        "precip_mm": 2.6,
-        "precip_prob": 93,
-        "weathercode": 53
+        "precip_mm": 0.5,
+        "precip_prob": 71,
+        "weathercode": 51
       },
       {
         "date": "2026-10-05",
-        "precip_mm": 9.7,
+        "precip_mm": 4.3,
         "precip_prob": 100,
-        "weathercode": 81
+        "weathercode": 55
       },
       {
         "date": "2026-10-06",
-        "precip_mm": 7.1,
-        "precip_prob": 82,
-        "weathercode": 81
-      },
-      {
-        "date": "2026-10-07",
-        "precip_mm": 5,
-        "precip_prob": 51,
+        "precip_mm": 3.9,
+        "precip_prob": 90,
         "weathercode": 53
       },
       {
-        "date": "2026-10-08",
-        "precip_mm": 37.1,
-        "precip_prob": 100,
+        "date": "2026-10-07",
+        "precip_mm": 14.4,
+        "precip_prob": 62,
         "weathercode": 81
       },
       {
+        "date": "2026-10-08",
+        "precip_mm": 23.8,
+        "precip_prob": 98,
+        "weathercode": 80
+      },
+      {
         "date": "2026-10-09",
-        "precip_mm": 18.7,
-        "precip_prob": 100,
+        "precip_mm": 19.4,
+        "precip_prob": 99,
         "weathercode": 80
       },
       {
@@ -1191,49 +969,49 @@
       {
         "date": "2026-10-11",
         "precip_mm": 19.4,
-        "precip_prob": 76,
+        "precip_prob": 82,
         "weathercode": 80
       },
       {
         "date": "2026-10-12",
         "precip_mm": 29.8,
-        "precip_prob": 83,
+        "precip_prob": 95,
         "weathercode": 81
       },
       {
         "date": "2026-10-13",
         "precip_mm": 39.4,
-        "precip_prob": 88,
+        "precip_prob": 91,
         "weathercode": 81
       },
       {
         "date": "2026-10-14",
         "precip_mm": 20.4,
-        "precip_prob": 84,
+        "precip_prob": 85,
         "weathercode": 80
       },
       {
         "date": "2026-10-15",
         "precip_mm": 8.6,
-        "precip_prob": 77,
+        "precip_prob": 73,
         "weathercode": 80
       },
       {
         "date": "2026-10-16",
         "precip_mm": 33.4,
-        "precip_prob": 69,
+        "precip_prob": 78,
         "weathercode": 81
       },
       {
         "date": "2026-10-17",
         "precip_mm": 24.4,
-        "precip_prob": 67,
+        "precip_prob": 75,
         "weathercode": 80
       },
       {
         "date": "2026-10-18",
-        "precip_mm": 1.35,
-        "precip_prob": 54,
+        "precip_mm": 0.4,
+        "precip_prob": 68,
         "weathercode": 51
       },
       {
@@ -1243,22 +1021,23 @@
         "weathercode": null
       }
     ],
-    "fetched_at": "2026-10-04T22:56:14.692Z",
+    "fetched_at": "2026-10-05T02:28:16.947Z",
     "from_cache": false
   },
-  "ensemble_2day": [
+  "forecast": [
     {
       "label": "Tomorrow",
       "date": "2026-10-05",
-      "mean_mm": 6.2,
-      "p75_mm": 6.8
+      "mean_mm": 7.1,
+      "p75_mm": 8.4
     },
     {
       "label": "Day after",
       "date": "2026-10-06",
-      "mean_mm": 5.5,
-      "p75_mm": 4
+      "mean_mm": 5.6,
+      "p75_mm": 7.3
     }
   ],
-  "dekadal_narrative": null
+  "ensemble_2day": null,
+  "daily_narrative": null
 }
