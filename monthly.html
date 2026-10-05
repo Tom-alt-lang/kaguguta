@@ -22,7 +22,7 @@
 <hr>
 <p><a href="index.html">← Back</a></p>
 <hr>
-<p style="font-size:0.8em;">Copyright &copy; 2026 <b>Kaguguta agrifarm Ltd.</b> Internal website.</p>
+<p style="font-size:0.8em;">Copyright &copy; 2026 <span style="font-weight:bold;">Kaguguta agrifarm Ltd.</span> Internal website.</p>
 
 <script>
 function formatDateShort(dateStr) {
@@ -65,7 +65,7 @@ fetch("data.json")
     months.forEach((mo, idx) => {
       html += "<b>" + formatMonth(mo.month) + "</b>";
       html += "<p>Total rainfall: " + mo.total_mm.toFixed(1) + " mm</p>";
-      html += "<p>Rainy days (≥0.28 mm): " + mo.rainy_days_028 + "</p>";
+      html += "<p>Rainy days: " + mo.rainy_days_028 + "</p>";
       html += "<p>Rainy days (>1 mm): " + mo.rainy_days_1mm + "</p>";
       html += "<p>Heaviest day: " + (mo.heaviest_day_date ? formatDateShort(mo.heaviest_day_date) : "—") +
         " — " + (mo.heaviest_day_mm || 0).toFixed(2) + " mm</p>";
@@ -84,23 +84,23 @@ fetch("data.json")
         html += "<p>Max instantaneous rate: " + mo.max_instant_mm_h + " mm/h at " +
           (mo.max_instant_time || "—") + " on " + (mo.max_instant_date ? formatDateShort(mo.max_instant_date) : "—") + "</p>";
       if (mo.max_5min_mm !== null && mo.max_5min_mm !== undefined)
-        html += "<p>Max 5-min: " + mo.max_5min_mm.toFixed(2) + " mm (" +
+        html += "<p>Max 5-min: " + mo.max_5min_mm.toFixed(2) + " mm at " +
           (mo.max_5min_start || "—") + "–" + (mo.max_5min_end || "—") + " on " +
-          (mo.max_5min_date ? formatDateShort(mo.max_5min_date) : "—") + ")</p>";
+          (mo.max_5min_date ? formatDateShort(mo.max_5min_date) : "—") + "</p>";
       if (mo.max_10min_mm !== null && mo.max_10min_mm !== undefined)
-        html += "<p>Max 10-min: " + mo.max_10min_mm.toFixed(2) + " mm (" +
+        html += "<p>Max 10-min: " + mo.max_10min_mm.toFixed(2) + " mm at " +
           (mo.max_10min_start || "—") + "–" + (mo.max_10min_end || "—") + " on " +
-          (mo.max_10min_date ? formatDateShort(mo.max_10min_date) : "—") + ")</p>";
+          (mo.max_10min_date ? formatDateShort(mo.max_10min_date) : "—") + "</p>";
       if (mo.max_60min_mm !== null && mo.max_60min_mm !== undefined)
-        html += "<p>Max 1-hour: " + mo.max_60min_mm.toFixed(2) + " mm (" +
+        html += "<p>Max 1-hour: " + mo.max_60min_mm.toFixed(2) + " mm at " +
           (mo.max_60min_start || "—") + "–" + (mo.max_60min_end || "—") + " on " +
-          (mo.max_60min_date ? formatDateShort(mo.max_60min_date) : "—") + ")</p>";
+          (mo.max_60min_date ? formatDateShort(mo.max_60min_date) : "—") + "</p>";
       if (mo.max_120min_mm !== null && mo.max_120min_mm !== undefined)
-        html += "<p>Max 2-hour: " + mo.max_120min_mm.toFixed(2) + " mm (" +
+        html += "<p>Max 2-hour: " + mo.max_120min_mm.toFixed(2) + " mm at " +
           (mo.max_120min_start || "—") + "–" + (mo.max_120min_end || "—") + " on " +
-          (mo.max_120min_date ? formatDateShort(mo.max_120min_date) : "—") + ")</p>";
+          (mo.max_120min_date ? formatDateShort(mo.max_120min_date) : "—") + "</p>";
 
-      if (mo.has_manual) html += "<p style='font-size:0.85em; color:#888;'>Note: includes manual entries.</p>";
+      if (mo.summary) html += "<p>SUMMARY: " + mo.summary + "</p>";
 
       if (idx < months.length - 1) html += "<hr>";
     });
