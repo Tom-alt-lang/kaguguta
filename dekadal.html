@@ -118,8 +118,7 @@ fetch("data.json")
       if (dekadDays.length > 0) {
         dekadDays.forEach(d => {
           const p = document.createElement("p");
-          let line = formatDateShort(d.date) + ": " + (d.total_mm || 0).toFixed(2) + " mm";
-          if (d.source === "manual") line += " (manual" + (d.note ? " — " + d.note : "") + ")";
+                  const line = formatDateShort(d.date) + ": " + (d.total_mm || 0).toFixed(2) + " mm";
           p.textContent = line;
           breakdownEl.appendChild(p);
         });
