@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T17:56:33.916Z",
+  "generated_at": "2026-10-06T17:57:54.799Z",
   "today": "2026-10-06",
   "yesterday": {
     "date": "2026-10-05",
@@ -1124,7 +1124,8 @@
           "rainy_days_1mm": 0
         }
       },
-      "has_manual": true
+      "has_manual": true,
+      "summary": "Let me check the broader context for August 2026.\nThe station's rainfall was concentrated in just two isolated events, so I'll lead with that and add the regional context. I found no credible reporting of coast-wide drought impacts for August, so I'll leave that out. The developing positive IOD is relevant to the coming short rains, so I'll include it.\n\nKaguguta Agrifarm recorded a total of 5.6mm in August 2026, roughly 0.1 times the long-term August average of around 48mm, which makes it a remarkably dry month. All of that rain fell on just two days, 15 August (5.0mm) and 26 August (0.6mm), and the first 14 days were completely dry. 15 August alone supplied almost 90 percent of the monthly total, while only that one day exceeded 1mm and no day came near the 10mm heavy-rain threshold. The dekadal split shows the same thinness, with nothing in the first ten days, 5.0mm in the second and 0.6mm in the third. The dry August fits the Kenya Meteorological Department's outlook, which \nexpected near average to below average rainfall over Kilifi, Mombasa, Kwale, Lamu and Tana River counties\n. Looking ahead, \na positive Indian Ocean Dipole is expected to develop\n, and that phase tends to enhance East African short rains, so the October to December season is worth watching after this very dry month."
     },
     {
       "month": "2026-09",
@@ -1169,7 +1170,8 @@
           "rainy_days_1mm": 3
         }
       },
-      "has_manual": true
+      "has_manual": true,
+      "summary": "Let me check for broader regional reporting and the IOD state.\nThe 17–21 Sep burst delivered 58.7mm, or roughly half of the month's 121.7mm, and 18 Sep alone (24.1mm) fell inside it. Two other heavy days sat outside that window: 11 Sep at 27.7mm, the month's wettest day, and 27 Sep at 20.2mm. The second dekad was the wettest at 74.5mm across 10 rainy days, against 9.5mm in the first dekad. Rain fell on 20 days in total, but 11 of them exceeded 1mm and many of the rest were trace amounts of 0.28mm. The month total was around 3.5 times the roughly 35mm September norm, which is a remarkable excess. It likely reflects a developing positive Indian Ocean Dipole, which tends to enhance East African rainfall. The Australian Bureau of Meteorology reported the weekly IOD index at +0.76°C for the week ending 27 September, the third consecutive week above the positive threshold. I found no reporting of flooding or other impacts on the Kenyan coast this month, and the Kenya Meteorological Department had forecast near-average September rainfall for Kilifi."
     },
     {
       "month": "2026-10",
@@ -1307,10 +1309,10 @@
       }
     ],
     "model": "ecmwf_ifs025",
-    "fetched_at": "2026-10-06T17:56:30.892Z",
+    "fetched_at": "2026-10-06T17:57:51.408Z",
     "from_cache": false
   },
   "ensemble_2day": null,
-  "daily_narrative": "KILIFI, Kenya, 6 October 2026 – Kaguguta Agrifarm weather station recorded 0.56 mm of rain on 5 October, double the 0.28 mm measured the previous day. The station has logged rainfall on every day of October so far, giving a running total of 2.8 mm for both the first dekad and the month to date. The reading is light compared with September, when daily totals reached as high as 27.72 mm on 11 September. No ensemble forecast data from ECMWF was available at the time of publication.",
+  "daily_narrative": "KILIFI, Kenya, Oct 6 - Kaguguta Agrifarm weather station recorded 0.56 mm of rain on October 5, following 0.28 mm on October 4 and 0.28 mm on October 3, according to the station's daily record. The first dekad of October has totalled 2.8 mm so far, equal to the month-to-date total, with measurable rainfall logged on each of the first five days. Some entries in the five-day summary conflict with the complete daily record, which lists duplicate and differently formatted dates for October 2 to 4, so the figures are subject to verification. No ECMWF ensemble forecast was available at the time of writing.",
   "dekadal_narrative": null
 }
