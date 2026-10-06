@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T17:54:11.884Z",
+  "generated_at": "2026-10-06T17:55:54.832Z",
   "today": "2026-10-06",
   "yesterday": {
     "date": "2026-10-05",
@@ -1307,10 +1307,10 @@
       }
     ],
     "model": "ecmwf_ifs025",
-    "fetched_at": "2026-10-06T17:54:11.183Z",
+    "fetched_at": "2026-10-06T17:55:50.803Z",
     "from_cache": false
   },
   "ensemble_2day": null,
-  "daily_narrative": null,
+  "daily_narrative": "**Kaguguta Agrifarm, Kilifi County, 6 October 2026** – The weather station recorded 0.56 mm of rainfall on 5 October, up from 0.28 mm the previous day. The current dekad (Oct-D1) has accumulated 2.8 mm, which equals the total for October so far. Rain has fallen on each of the past five days, leaving no consecutive dry days on record. No ECMWF ensemble forecast was available at the time of reporting.\n\n*Editor's note: The \"last 5 days\" list supplied contained duplicate and conflicting entries for 4 October (0.28 mm and 0.00 mm) and 2–3 October, and the daily record carries conflicting entries for those dates as well. The bulletin therefore cites only the 4 and 5 October readings, which match the complete daily record. The 2.8 mm dekad total is consistent with the daily record entries for 1–5 October (1.12 + 0.56 + 0.28 + 0.28 + 0.56 = 2.80 mm).*",
   "dekadal_narrative": null
 }
