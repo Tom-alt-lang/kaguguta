@@ -64,7 +64,7 @@ fetch("data.json")
     if (!y) {
       observedEl.innerHTML = "<p>No data available.</p>";
     } else {
-      const rainy = y.total_mm > 0.28;
+      const rainy = y.total_mm > 1;
       let html = "<p>Date: " + formatDate(y.date) + "</p>";
       html += "<p>Observed rainfall: " + (y.total_mm || 0).toFixed(2) + " mm";
       if (y.source === "manual") html += " (manual" + (y.note ? " — " + y.note : "") + ")";
