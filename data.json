@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T02:29:06.414Z",
+  "generated_at": "2026-10-06T17:54:11.884Z",
   "today": "2026-10-06",
   "yesterday": {
     "date": "2026-10-05",
@@ -22,6 +22,132 @@
     "max_120min_end": "10:57"
   },
   "daily_history": [
+    {
+      "date": "2026-08-01",
+      "total_mm": 0,
+      "tip_count": null,
+      "source": "manual",
+      "note": "",
+      "max_instant_mm_h": null,
+      "max_instant_time": null,
+      "max_5min_mm": null,
+      "max_5min_start": null,
+      "max_5min_end": null,
+      "max_10min_mm": null,
+      "max_10min_start": null,
+      "max_10min_end": null,
+      "max_60min_mm": null,
+      "max_60min_start": null,
+      "max_60min_end": null,
+      "max_120min_mm": null,
+      "max_120min_start": null,
+      "max_120min_end": null
+    },
+    {
+      "date": "2026-08-02",
+      "total_mm": 0,
+      "tip_count": null,
+      "source": "manual",
+      "note": "",
+      "max_instant_mm_h": null,
+      "max_instant_time": null,
+      "max_5min_mm": null,
+      "max_5min_start": null,
+      "max_5min_end": null,
+      "max_10min_mm": null,
+      "max_10min_start": null,
+      "max_10min_end": null,
+      "max_60min_mm": null,
+      "max_60min_start": null,
+      "max_60min_end": null,
+      "max_120min_mm": null,
+      "max_120min_start": null,
+      "max_120min_end": null
+    },
+    {
+      "date": "2026-08-03",
+      "total_mm": 0,
+      "tip_count": null,
+      "source": "manual",
+      "note": "",
+      "max_instant_mm_h": null,
+      "max_instant_time": null,
+      "max_5min_mm": null,
+      "max_5min_start": null,
+      "max_5min_end": null,
+      "max_10min_mm": null,
+      "max_10min_start": null,
+      "max_10min_end": null,
+      "max_60min_mm": null,
+      "max_60min_start": null,
+      "max_60min_end": null,
+      "max_120min_mm": null,
+      "max_120min_start": null,
+      "max_120min_end": null
+    },
+    {
+      "date": "2026-08-04",
+      "total_mm": 0,
+      "tip_count": null,
+      "source": "manual",
+      "note": "",
+      "max_instant_mm_h": null,
+      "max_instant_time": null,
+      "max_5min_mm": null,
+      "max_5min_start": null,
+      "max_5min_end": null,
+      "max_10min_mm": null,
+      "max_10min_start": null,
+      "max_10min_end": null,
+      "max_60min_mm": null,
+      "max_60min_start": null,
+      "max_60min_end": null,
+      "max_120min_mm": null,
+      "max_120min_start": null,
+      "max_120min_end": null
+    },
+    {
+      "date": "2026-08-15",
+      "total_mm": 5,
+      "tip_count": null,
+      "source": "manual",
+      "note": "",
+      "max_instant_mm_h": null,
+      "max_instant_time": null,
+      "max_5min_mm": null,
+      "max_5min_start": null,
+      "max_5min_end": null,
+      "max_10min_mm": null,
+      "max_10min_start": null,
+      "max_10min_end": null,
+      "max_60min_mm": null,
+      "max_60min_start": null,
+      "max_60min_end": null,
+      "max_120min_mm": null,
+      "max_120min_start": null,
+      "max_120min_end": null
+    },
+    {
+      "date": "2026-08-26",
+      "total_mm": 0.56,
+      "tip_count": null,
+      "source": "manual",
+      "note": "",
+      "max_instant_mm_h": null,
+      "max_instant_time": null,
+      "max_5min_mm": null,
+      "max_5min_start": null,
+      "max_5min_end": null,
+      "max_10min_mm": null,
+      "max_10min_start": null,
+      "max_10min_end": null,
+      "max_60min_mm": null,
+      "max_60min_start": null,
+      "max_60min_end": null,
+      "max_120min_mm": null,
+      "max_120min_start": null,
+      "max_120min_end": null
+    },
     {
       "date": "2026-09-09",
       "total_mm": 8.68,
@@ -708,6 +834,102 @@
   },
   "all_dekadals": [
     {
+      "dekad": "2026-08-D1",
+      "days": [
+        "2026-08-01",
+        "2026-08-02",
+        "2026-08-03",
+        "2026-08-04"
+      ],
+      "total_mm": 0,
+      "rainy_days_028": 0,
+      "rainy_days_1mm": 0,
+      "heaviest_day_mm": 0,
+      "heaviest_day_date": null,
+      "max_instant_mm_h": null,
+      "max_instant_date": null,
+      "max_instant_time": null,
+      "max_5min_mm": null,
+      "max_5min_date": null,
+      "max_5min_start": null,
+      "max_5min_end": null,
+      "max_10min_mm": null,
+      "max_10min_date": null,
+      "max_10min_start": null,
+      "max_10min_end": null,
+      "max_60min_mm": null,
+      "max_60min_date": null,
+      "max_60min_start": null,
+      "max_60min_end": null,
+      "max_120min_mm": null,
+      "max_120min_date": null,
+      "max_120min_start": null,
+      "max_120min_end": null,
+      "has_manual": true
+    },
+    {
+      "dekad": "2026-08-D2",
+      "days": [
+        "2026-08-15"
+      ],
+      "total_mm": 5,
+      "rainy_days_028": 1,
+      "rainy_days_1mm": 1,
+      "heaviest_day_mm": 5,
+      "heaviest_day_date": "2026-08-15",
+      "max_instant_mm_h": null,
+      "max_instant_date": null,
+      "max_instant_time": null,
+      "max_5min_mm": null,
+      "max_5min_date": null,
+      "max_5min_start": null,
+      "max_5min_end": null,
+      "max_10min_mm": null,
+      "max_10min_date": null,
+      "max_10min_start": null,
+      "max_10min_end": null,
+      "max_60min_mm": null,
+      "max_60min_date": null,
+      "max_60min_start": null,
+      "max_60min_end": null,
+      "max_120min_mm": null,
+      "max_120min_date": null,
+      "max_120min_start": null,
+      "max_120min_end": null,
+      "has_manual": true
+    },
+    {
+      "dekad": "2026-08-D3",
+      "days": [
+        "2026-08-26"
+      ],
+      "total_mm": 0.56,
+      "rainy_days_028": 1,
+      "rainy_days_1mm": 0,
+      "heaviest_day_mm": 0.56,
+      "heaviest_day_date": "2026-08-26",
+      "max_instant_mm_h": null,
+      "max_instant_date": null,
+      "max_instant_time": null,
+      "max_5min_mm": null,
+      "max_5min_date": null,
+      "max_5min_start": null,
+      "max_5min_end": null,
+      "max_10min_mm": null,
+      "max_10min_date": null,
+      "max_10min_start": null,
+      "max_10min_end": null,
+      "max_60min_mm": null,
+      "max_60min_date": null,
+      "max_60min_start": null,
+      "max_60min_end": null,
+      "max_120min_mm": null,
+      "max_120min_date": null,
+      "max_120min_start": null,
+      "max_120min_end": null,
+      "has_manual": true
+    },
+    {
       "dekad": "2026-09-D1",
       "days": [
         "2026-09-09",
@@ -860,6 +1082,51 @@
   ],
   "monthly": [
     {
+      "month": "2026-08",
+      "total_mm": 5.56,
+      "rainy_days_028": 2,
+      "rainy_days_1mm": 1,
+      "heaviest_day_mm": 5,
+      "heaviest_day_date": "2026-08-15",
+      "max_instant_mm_h": null,
+      "max_instant_date": null,
+      "max_instant_time": null,
+      "max_5min_mm": null,
+      "max_5min_date": null,
+      "max_5min_start": null,
+      "max_5min_end": null,
+      "max_10min_mm": null,
+      "max_10min_date": null,
+      "max_10min_start": null,
+      "max_10min_end": null,
+      "max_60min_mm": null,
+      "max_60min_date": null,
+      "max_60min_start": null,
+      "max_60min_end": null,
+      "max_120min_mm": null,
+      "max_120min_date": null,
+      "max_120min_start": null,
+      "max_120min_end": null,
+      "dekads": {
+        "D1": {
+          "total_mm": 0,
+          "rainy_days_028": 0,
+          "rainy_days_1mm": 0
+        },
+        "D2": {
+          "total_mm": 5,
+          "rainy_days_028": 1,
+          "rainy_days_1mm": 1
+        },
+        "D3": {
+          "total_mm": 0.56,
+          "rainy_days_028": 1,
+          "rainy_days_1mm": 0
+        }
+      },
+      "has_manual": true
+    },
+    {
       "month": "2026-09",
       "total_mm": 121.68,
       "rainy_days_028": 20,
@@ -902,8 +1169,7 @@
           "rainy_days_1mm": 3
         }
       },
-      "has_manual": true,
-      "summary": "Kaguguta Agrifarm recorded 121.7mm of rain in September 2026, and 103.8mm of that (about 85%) fell on just five days, each above 10mm, three of them above 20mm. The wettest stretch was 17–21 Sep, when 58.7mm fell, roughly 48% of the monthly total, including 42.3mm over 18–20 Sep. The heaviest single day was 11 Sep at 27.7mm, and 27 Sep brought another 20.2mm. The daily record shows no rain before 9 Sep, and the dekadal totals rose from 9.5mm in the first dekad to 74.5mm in the second, then eased to 37.7mm in the third. Although rain was recorded on 20 days, only 11 exceeded 1mm. On the wider climate, \nthe Australian Bureau of Meteorology classed the Indian Ocean Dipole as neutral, though its weekly index of +0.76°C for the week ending 27 September was the third straight week above the +0.4°C positive threshold\n, a development relevant to the October–December season."
+      "has_manual": true
     },
     {
       "month": "2026-10",
@@ -944,119 +1210,107 @@
   "forecast": {
     "daily": [
       {
-        "date": "2026-10-04",
-        "precip_mm": 2.3,
-        "precip_prob": 85,
+        "date": "2026-10-05",
+        "precip_mm": 2.2,
+        "precip_prob": 88,
         "weathercode": 51
       },
       {
-        "date": "2026-10-05",
-        "precip_mm": 5.5,
-        "precip_prob": 100,
-        "weathercode": 55
-      },
-      {
         "date": "2026-10-06",
-        "precip_mm": 2.8,
-        "precip_prob": 87,
+        "precip_mm": 4.9,
+        "precip_prob": 90,
         "weathercode": 53
       },
       {
         "date": "2026-10-07",
-        "precip_mm": 0.7,
-        "precip_prob": 50,
+        "precip_mm": 1.3,
+        "precip_prob": 63,
         "weathercode": 51
       },
       {
         "date": "2026-10-08",
-        "precip_mm": 25.8,
-        "precip_prob": 100,
-        "weathercode": 63
-      },
-      {
-        "date": "2026-10-09",
-        "precip_mm": 9.9,
+        "precip_mm": 28,
         "precip_prob": 100,
         "weathercode": 80
       },
       {
+        "date": "2026-10-09",
+        "precip_mm": 13.4,
+        "precip_prob": 97,
+        "weathercode": 80
+      },
+      {
         "date": "2026-10-10",
-        "precip_mm": 19.9,
-        "precip_prob": 95,
-        "weathercode": 63
+        "precip_mm": 11.8,
+        "precip_prob": 94,
+        "weathercode": 80
       },
       {
         "date": "2026-10-11",
-        "precip_mm": 17.4,
-        "precip_prob": 96,
-        "weathercode": 61
+        "precip_mm": 13.7,
+        "precip_prob": 92,
+        "weathercode": 55
       },
       {
         "date": "2026-10-12",
-        "precip_mm": 25,
-        "precip_prob": 97,
-        "weathercode": 81
+        "precip_mm": 33.4,
+        "precip_prob": 98,
+        "weathercode": 61
       },
       {
         "date": "2026-10-13",
-        "precip_mm": 30,
-        "precip_prob": 96,
-        "weathercode": 81
+        "precip_mm": 38.6,
+        "precip_prob": 95,
+        "weathercode": 61
       },
       {
         "date": "2026-10-14",
-        "precip_mm": 4,
-        "precip_prob": 82,
-        "weathercode": 51
+        "precip_mm": 15.4,
+        "precip_prob": 91,
+        "weathercode": 61
       },
       {
         "date": "2026-10-15",
-        "precip_mm": 2.8,
-        "precip_prob": 82,
-        "weathercode": 51
-      },
-      {
-        "date": "2026-10-16",
-        "precip_mm": 3.6,
-        "precip_prob": 80,
+        "precip_mm": 4.6,
+        "precip_prob": 75,
         "weathercode": 53
       },
       {
-        "date": "2026-10-17",
-        "precip_mm": 2.6,
-        "precip_prob": 69,
+        "date": "2026-10-16",
+        "precip_mm": 1.4,
+        "precip_prob": 80,
         "weathercode": 51
       },
       {
+        "date": "2026-10-17",
+        "precip_mm": 10,
+        "precip_prob": 88,
+        "weathercode": 61
+      },
+      {
         "date": "2026-10-18",
-        "precip_mm": 35.2,
-        "precip_prob": 65,
-        "weathercode": 63
+        "precip_mm": 1,
+        "precip_prob": 70,
+        "weathercode": 51
       },
       {
         "date": "2026-10-19",
+        "precip_mm": 0.8,
+        "precip_prob": 57,
+        "weathercode": 51
+      },
+      {
+        "date": "2026-10-20",
         "precip_mm": null,
         "precip_prob": null,
         "weathercode": null
       }
     ],
     "model": "ecmwf_ifs025",
-    "fetched_at": "2026-10-05T16:24:22.371Z",
-    "from_cache": true
+    "fetched_at": "2026-10-06T17:54:11.183Z",
+    "from_cache": false
   },
-  "ensemble_2day": [
-    {
-      "label": "Tomorrow",
-      "date": "2026-10-06",
-      "mean_mm": 4.7,
-      "p75_mm": 5.6
-    },
-    {
-      "label": "Day after",
-      "date": "2026-10-07",
-      "mean_mm": 6.6,
-      "p75_mm": 8.7
-    }
-  ],
+  "ensemble_2day": null,
+  "daily_narrative": null,
   "dekadal_narrative": null
 }
