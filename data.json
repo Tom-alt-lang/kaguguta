@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-10-05T16:24:37.910Z",
-  "today": "2026-10-05",
+  "generated_at": "2026-10-06T02:29:06.414Z",
+  "today": "2026-10-06",
   "yesterday": {
-    "date": "2026-10-04",
-    "total_mm": 0.28,
-    "tip_count": 1,
+    "date": "2026-10-05",
+    "total_mm": 0.56,
+    "tip_count": 2,
     "source": "gauge",
-    "max_instant_mm_h": null,
-    "max_instant_time": null,
-    "max_5min_mm": null,
-    "max_5min_start": null,
-    "max_5min_end": null,
-    "max_10min_mm": null,
-    "max_10min_start": null,
-    "max_10min_end": null,
-    "max_60min_mm": null,
-    "max_60min_start": null,
-    "max_60min_end": null,
-    "max_120min_mm": null,
-    "max_120min_start": null,
-    "max_120min_end": null
+    "max_instant_mm_h": 67,
+    "max_instant_time": "08:57",
+    "max_5min_mm": 0.56,
+    "max_5min_start": "08:57",
+    "max_5min_end": "09:02",
+    "max_10min_mm": 0.56,
+    "max_10min_start": "08:57",
+    "max_10min_end": "09:07",
+    "max_60min_mm": 0.56,
+    "max_60min_start": "08:57",
+    "max_60min_end": "09:57",
+    "max_120min_mm": 0.56,
+    "max_120min_start": "08:57",
+    "max_120min_end": "10:57"
   },
   "daily_history": [
     {
@@ -545,6 +545,26 @@
       "max_120min_end": null
     },
     {
+      "date": "2026-10-05",
+      "total_mm": 0.56,
+      "tip_count": 2,
+      "source": "gauge",
+      "max_instant_mm_h": 67,
+      "max_instant_time": "08:57",
+      "max_5min_mm": 0.56,
+      "max_5min_start": "08:57",
+      "max_5min_end": "09:02",
+      "max_10min_mm": 0.56,
+      "max_10min_start": "08:57",
+      "max_10min_end": "09:07",
+      "max_60min_mm": 0.56,
+      "max_60min_start": "08:57",
+      "max_60min_end": "09:57",
+      "max_120min_mm": 0.56,
+      "max_120min_start": "08:57",
+      "max_120min_end": "10:57"
+    },
+    {
       "date": "2026-10-2",
       "total_mm": 0,
       "tip_count": null,
@@ -615,18 +635,19 @@
       "2026-10-02",
       "2026-10-03",
       "2026-10-04",
+      "2026-10-05",
       "2026-10-2",
       "2026-10-3",
       "2026-10-4"
     ],
-    "total_mm": 2.24,
-    "rainy_days_028": 4,
+    "total_mm": 2.8,
+    "rainy_days_028": 5,
     "rainy_days_1mm": 1,
     "heaviest_day_mm": 1.12,
     "heaviest_day_date": "2026-10-01",
-    "max_instant_mm_h": 34,
-    "max_instant_date": "2026-10-01",
-    "max_instant_time": "07:57",
+    "max_instant_mm_h": 67,
+    "max_instant_date": "2026-10-05",
+    "max_instant_time": "08:57",
     "max_5min_mm": 0.56,
     "max_5min_date": "2026-10-01",
     "max_5min_start": "07:57",
@@ -805,18 +826,19 @@
         "2026-10-02",
         "2026-10-03",
         "2026-10-04",
+        "2026-10-05",
         "2026-10-2",
         "2026-10-3",
         "2026-10-4"
       ],
-      "total_mm": 2.24,
-      "rainy_days_028": 4,
+      "total_mm": 2.8,
+      "rainy_days_028": 5,
       "rainy_days_1mm": 1,
       "heaviest_day_mm": 1.12,
       "heaviest_day_date": "2026-10-01",
-      "max_instant_mm_h": 34,
-      "max_instant_date": "2026-10-01",
-      "max_instant_time": "07:57",
+      "max_instant_mm_h": 67,
+      "max_instant_date": "2026-10-05",
+      "max_instant_time": "08:57",
       "max_5min_mm": 0.56,
       "max_5min_date": "2026-10-01",
       "max_5min_start": "07:57",
@@ -881,18 +903,18 @@
         }
       },
       "has_manual": true,
-      "summary": "Kaguguta Agrifarm recorded 121.7mm of rain in September 2026, and 58.7mm of it (about 48%) fell in the five days from 17 to 21 Sep. The most concentrated three-day spell, 18–20 Sep, brought 42.3mm. Five days exceeded 10mm and three exceeded 20mm (27.7mm on 11 Sep, 24.1mm on 18 Sep and 20.2mm on 27 Sep), with 11 Sep the heaviest day of the month. Rain was recorded on 20 days, every day from 9 to 30 Sep except 25 and 26 Sep, but only 11 days exceeded 1mm. The daily record has no entries before 9 Sep, and the second dekad (11–20 Sep) accounted for 74.5mm of the monthly total.\n\n\nFEWS NET's September regional monitor described the Indian Ocean Dipole as positively neutral at +0.25°C and expected to warm, which it said would reinforce the wet signal over eastern parts of the region\n ahead of the October–December short rains."
+      "summary": "Kaguguta Agrifarm recorded 121.7mm of rain in September 2026, and 103.8mm of that (about 85%) fell on just five days, each above 10mm, three of them above 20mm. The wettest stretch was 17–21 Sep, when 58.7mm fell, roughly 48% of the monthly total, including 42.3mm over 18–20 Sep. The heaviest single day was 11 Sep at 27.7mm, and 27 Sep brought another 20.2mm. The daily record shows no rain before 9 Sep, and the dekadal totals rose from 9.5mm in the first dekad to 74.5mm in the second, then eased to 37.7mm in the third. Although rain was recorded on 20 days, only 11 exceeded 1mm. On the wider climate, \nthe Australian Bureau of Meteorology classed the Indian Ocean Dipole as neutral, though its weekly index of +0.76°C for the week ending 27 September was the third straight week above the +0.4°C positive threshold\n, a development relevant to the October–December season."
     },
     {
       "month": "2026-10",
-      "total_mm": 2.24,
-      "rainy_days_028": 4,
+      "total_mm": 2.8,
+      "rainy_days_028": 5,
       "rainy_days_1mm": 1,
       "heaviest_day_mm": 1.12,
       "heaviest_day_date": "2026-10-01",
-      "max_instant_mm_h": 34,
-      "max_instant_date": "2026-10-01",
-      "max_instant_time": "07:57",
+      "max_instant_mm_h": 67,
+      "max_instant_date": "2026-10-05",
+      "max_instant_time": "08:57",
       "max_5min_mm": 0.56,
       "max_5min_date": "2026-10-01",
       "max_5min_start": "07:57",
@@ -911,8 +933,8 @@
       "max_120min_end": "09:43",
       "dekads": {
         "D1": {
-          "total_mm": 2.24,
-          "rainy_days_028": 4,
+          "total_mm": 2.8,
+          "rainy_days_028": 5,
           "rainy_days_1mm": 1
         }
       },
@@ -1020,9 +1042,21 @@
     ],
     "model": "ecmwf_ifs025",
     "fetched_at": "2026-10-05T16:24:22.371Z",
-    "from_cache": false
+    "from_cache": true
   },
-  "ensemble_2day": null,
-  "daily_narrative": null,
-  "dekadal_narrative": "**Kaguguta Agrifarm weather station, Kilifi County, 5 October 2026**\n\nKaguguta Agrifarm recorded 37.7 mm of rain in the third dekad of September (21–30 Sep), with 8 rainy days at or above 0.28 mm and 3 days above 1 mm. The total was about half of the 74.5 mm logged in Sep-D2 and well above the 9.5 mm in Sep-D1, making it the second-wettest of the three September dekads in the station record. A single event on 27 September, which brought 20.2 mm, accounted for more than half of the dekadal total. Rainfall rates peaked at 53 mm/h at 08:42 that day, and the heaviest hour (5.04 mm) came later, between 11:16 and 12:16. The Kenya Meteorological Service Authority had \nforecast light showers for Mombasa, Kwale, Lamu and Kilifi over 26–30 September\n, so the 27 September total was heavier than that guidance suggested. Oct-D1 has so far produced 2.2 mm over 4 rainy days, and the station's forecast calls for 141.0 mm over the next dekad, with the largest daily amount, 30.0 mm, on 13 October. That forecast is nearly double the highest dekadal total in the station's four-dekad record. It is consistent with KMSA's outlook, which says \nabove-average rainfall is likely in Kwale, Mombasa, Kilifi, Lamu\n and other counties in October."
+  "ensemble_2day": [
+    {
+      "label": "Tomorrow",
+      "date": "2026-10-06",
+      "mean_mm": 4.7,
+      "p75_mm": 5.6
+    },
+    {
+      "label": "Day after",
+      "date": "2026-10-07",
+      "mean_mm": 6.6,
+      "p75_mm": 8.7
+    }
+  ],
+  "dekadal_narrative": null
 }
