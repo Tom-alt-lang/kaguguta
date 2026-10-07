@@ -80,6 +80,11 @@ fetch("data.json")
           html += "<p>Max 1-hour: " + y.max_60min_mm.toFixed(2) + " mm (" + (y.max_60min_start || "—") + "–" + (y.max_60min_end || "—") + ")</p>";
         if (y.max_120min_mm !== null && y.max_120min_mm !== undefined)
           html += "<p>Max 2-hour: " + y.max_120min_mm.toFixed(2) + " mm (" + (y.max_120min_start || "—") + "–" + (y.max_120min_end || "—") + ")</p>";
+        // Assumed path: chart/daily/YYYY-MM-DD.jpg, pushed by the GitHub
+        // Workflow we'll build next — adjust this path once that's in place
+        // if the actual naming convention ends up different.
+        html += '<p style="margin-top:10px;"><a href="chart/daily/' + y.date + '.jpg" target="_blank" ' +
+          'style="display:inline-block; padding:6px 14px; border:1px solid #333; text-decoration:none; color:inherit; font-size:0.9em;">Daily chart figure</a></p>';
       }
       observedEl.innerHTML = html;
     }
@@ -105,6 +110,7 @@ fetch("data.json")
     const narrative = data.daily_narrative;
     const narrativeEl = document.getElementById("claude-narrative");
     if (narrative) {
+      narrativeEl.style.fontStyle = "normal";
       narrativeEl.textContent = narrative;
     } else {
       narrativeEl.style.fontStyle = "italic";
