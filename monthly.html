@@ -15,12 +15,11 @@
 
 <h2>Monthly Rainfall</h2>
 <p id="generated-at"></p>
+<p><a href="index.html">← Back</a></p>
 <hr>
 
 <div id="monthly-data"></div>
 
-<hr>
-<p><a href="index.html">← Back</a></p>
 <hr>
 <p style="font-size:0.8em;">Copyright &copy; 2026 <span style="font-weight:bold;">Kaguguta agrifarm Ltd.</span> Internal website.</p>
 
@@ -64,7 +63,8 @@ fetch("data.json")
 
     months.forEach((mo, idx) => {
       html += "<b>" + formatMonth(mo.month) + "</b>";
-      html += "<p>Total rainfall: " + mo.total_mm.toFixed(1) + " mm</p>";
+      const totalText = (mo.total_mm !== null && mo.total_mm !== undefined) ? mo.total_mm.toFixed(1) + " mm" : "— (data issue, check overrides)";
+      html += "<p>Total rainfall: " + totalText + "</p>";
       html += "<p>Rainy days: " + mo.rainy_days_028 + "</p>";
       html += "<p>Rainy days (>1 mm): " + mo.rainy_days_1mm + "</p>";
       html += "<p>Heaviest day: " + (mo.heaviest_day_date ? formatDateShort(mo.heaviest_day_date) : "—") +
@@ -100,7 +100,7 @@ fetch("data.json")
           (mo.max_120min_start || "—") + "–" + (mo.max_120min_end || "—") + " on " +
           (mo.max_120min_date ? formatDateShort(mo.max_120min_date) : "—") + "</p>";
 
-      if (mo.summary) html += "<p>SUMMARY: " + mo.summary + "</p>";
+      if (mo.summary) html += '<p style="margin-top:10px;"><span style="font-weight:bold;">SUMMARY:</span> ' + mo.summary + "</p>";
 
       if (idx < months.length - 1) html += "<hr>";
     });
@@ -114,3 +114,4 @@ fetch("data.json")
 </script>
 </body>
 </html>
+
