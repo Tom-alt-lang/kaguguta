@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-10-07T11:32:42.120Z",
-  "today": "2026-10-07",
+  "generated_at": "2026-10-08T02:28:21.387Z",
+  "today": "2026-10-08",
   "yesterday": {
-    "date": "2026-10-06",
-    "total_mm": 5.04,
-    "tip_count": 18,
+    "date": "2026-10-07",
+    "total_mm": 16.8,
+    "tip_count": 60,
     "source": "gauge",
-    "max_instant_mm_h": 14,
-    "max_instant_time": "22:39",
+    "max_instant_mm_h": 22,
+    "max_instant_time": "09:44",
     "max_5min_mm": 1.12,
-    "max_5min_start": "22:35",
-    "max_5min_end": "22:40",
+    "max_5min_start": "01:05",
+    "max_5min_end": "01:10",
     "max_10min_mm": 1.68,
-    "max_10min_start": "22:33",
-    "max_10min_end": "22:43",
-    "max_60min_mm": 3.36,
-    "max_60min_start": "21:53",
-    "max_60min_end": "22:53",
-    "max_120min_mm": 4.2,
-    "max_120min_start": "21:28",
-    "max_120min_end": "23:28"
+    "max_10min_start": "09:35",
+    "max_10min_end": "09:45",
+    "max_60min_mm": 5.6,
+    "max_60min_start": "01:05",
+    "max_60min_end": "02:05",
+    "max_120min_mm": 8.12,
+    "max_120min_start": "01:05",
+    "max_120min_end": "03:05"
   },
   "daily_history": [
     {
@@ -1374,6 +1374,26 @@
       "max_120min_mm": 4.2,
       "max_120min_start": "21:28",
       "max_120min_end": "23:28"
+    },
+    {
+      "date": "2026-10-07",
+      "total_mm": 16.8,
+      "tip_count": 60,
+      "source": "gauge",
+      "max_instant_mm_h": 22,
+      "max_instant_time": "09:44",
+      "max_5min_mm": 1.12,
+      "max_5min_start": "01:05",
+      "max_5min_end": "01:10",
+      "max_10min_mm": 1.68,
+      "max_10min_start": "09:35",
+      "max_10min_end": "09:45",
+      "max_60min_mm": 5.6,
+      "max_60min_start": "01:05",
+      "max_60min_end": "02:05",
+      "max_120min_mm": 8.12,
+      "max_120min_start": "01:05",
+      "max_120min_end": "03:05"
     }
   ],
   "current_dekad": {
@@ -1384,13 +1404,14 @@
       "2026-10-03",
       "2026-10-04",
       "2026-10-05",
-      "2026-10-06"
+      "2026-10-06",
+      "2026-10-07"
     ],
-    "total_mm": 6.72,
-    "rainy_days_028": 3,
-    "rainy_days_1mm": 2,
-    "heaviest_day_mm": 5.04,
-    "heaviest_day_date": "2026-10-06",
+    "total_mm": 23.52,
+    "rainy_days_028": 4,
+    "rainy_days_1mm": 3,
+    "heaviest_day_mm": 16.8,
+    "heaviest_day_date": "2026-10-07",
     "max_instant_mm_h": 67,
     "max_instant_date": "2026-10-05",
     "max_instant_time": "08:57",
@@ -1402,14 +1423,14 @@
     "max_10min_date": "2026-10-06",
     "max_10min_start": "22:33",
     "max_10min_end": "22:43",
-    "max_60min_mm": 3.36,
-    "max_60min_date": "2026-10-06",
-    "max_60min_start": "21:53",
-    "max_60min_end": "22:53",
-    "max_120min_mm": 4.2,
-    "max_120min_date": "2026-10-06",
-    "max_120min_start": "21:28",
-    "max_120min_end": "23:28",
+    "max_60min_mm": 5.6,
+    "max_60min_date": "2026-10-07",
+    "max_60min_start": "01:05",
+    "max_60min_end": "02:05",
+    "max_120min_mm": 8.12,
+    "max_120min_date": "2026-10-07",
+    "max_120min_start": "01:05",
+    "max_120min_end": "03:05",
     "has_manual": true
   },
   "previous_dekad": {
@@ -1702,13 +1723,14 @@
         "2026-10-03",
         "2026-10-04",
         "2026-10-05",
-        "2026-10-06"
+        "2026-10-06",
+        "2026-10-07"
       ],
-      "total_mm": 6.72,
-      "rainy_days_028": 3,
-      "rainy_days_1mm": 2,
-      "heaviest_day_mm": 5.04,
-      "heaviest_day_date": "2026-10-06",
+      "total_mm": 23.52,
+      "rainy_days_028": 4,
+      "rainy_days_1mm": 3,
+      "heaviest_day_mm": 16.8,
+      "heaviest_day_date": "2026-10-07",
       "max_instant_mm_h": 67,
       "max_instant_date": "2026-10-05",
       "max_instant_time": "08:57",
@@ -1720,14 +1742,14 @@
       "max_10min_date": "2026-10-06",
       "max_10min_start": "22:33",
       "max_10min_end": "22:43",
-      "max_60min_mm": 3.36,
-      "max_60min_date": "2026-10-06",
-      "max_60min_start": "21:53",
-      "max_60min_end": "22:53",
-      "max_120min_mm": 4.2,
-      "max_120min_date": "2026-10-06",
-      "max_120min_start": "21:28",
-      "max_120min_end": "23:28",
+      "max_60min_mm": 5.6,
+      "max_60min_date": "2026-10-07",
+      "max_60min_start": "01:05",
+      "max_60min_end": "02:05",
+      "max_120min_mm": 8.12,
+      "max_120min_date": "2026-10-07",
+      "max_120min_start": "01:05",
+      "max_120min_end": "03:05",
       "has_manual": true
     }
   ],
@@ -1776,7 +1798,7 @@
         }
       },
       "has_manual": true,
-      "summary": "Kaguguta Agrifarm recorded 40.8mm of rain in August 2026, roughly 0.9 times the August long-term average of around 48mm and in line with near-average conditions for the month. Rain fell on 12 days, with 6 of those exceeding 1mm. The wettest stretch came at the end of the month, when 19.0mm fell between 29 and 31 August, including 15.4mm on 30 August, the only day above 10mm; 22 August brought 8.1mm and 5 August brought 5.0mm. Kenya Met's monthly forecast had called for generally dry conditions with near-average to below-average rainfall along the coast, and the weekly outlooks for mid-August expected rain mainly in the western and central highlands and Lamu. Looking ahead, a positive Indian Ocean Dipole alongside a strengthening El Niño is a combination that normally enhances rainfall in the Greater Horn of Africa, and ICPAC expects wetter-than-normal conditions in the October to December 2026 season."
+      "summary": "Kaguguta Agrifarm recorded 40.8mm of rain in August 2026, roughly 0.9 times the August long-term average of around 48mm and in line with near-average conditions for the month. Rain fell on 12 days, with 6 of those exceeding 1mm. The wettest stretch came at the end of the month, when 19.0mm fell between 29 and 31 August, including 15.4mm on 30 August, the only day above 10mm; 22 August brought 8.1mm and 5 August brought 5.0mm. Looking ahead, a positive Indian Ocean Dipole alongside a strengthening El Niño is a combination that normally enhances rainfall in the Greater Horn of Africa, and ICPAC expects wetter-than-normal conditions in the October to December 2026 season."
     },
     {
       "month": "2026-09",
@@ -1826,11 +1848,11 @@
     },
     {
       "month": "2026-10",
-      "total_mm": 6.72,
-      "rainy_days_028": 3,
-      "rainy_days_1mm": 2,
-      "heaviest_day_mm": 5.04,
-      "heaviest_day_date": "2026-10-06",
+      "total_mm": 23.52,
+      "rainy_days_028": 4,
+      "rainy_days_1mm": 3,
+      "heaviest_day_mm": 16.8,
+      "heaviest_day_date": "2026-10-07",
       "max_instant_mm_h": 67,
       "max_instant_date": "2026-10-05",
       "max_instant_time": "08:57",
@@ -1842,19 +1864,19 @@
       "max_10min_date": "2026-10-06",
       "max_10min_start": "22:33",
       "max_10min_end": "22:43",
-      "max_60min_mm": 3.36,
-      "max_60min_date": "2026-10-06",
-      "max_60min_start": "21:53",
-      "max_60min_end": "22:53",
-      "max_120min_mm": 4.2,
-      "max_120min_date": "2026-10-06",
-      "max_120min_start": "21:28",
-      "max_120min_end": "23:28",
+      "max_60min_mm": 5.6,
+      "max_60min_date": "2026-10-07",
+      "max_60min_start": "01:05",
+      "max_60min_end": "02:05",
+      "max_120min_mm": 8.12,
+      "max_120min_date": "2026-10-07",
+      "max_120min_start": "01:05",
+      "max_120min_end": "03:05",
       "dekads": {
         "D1": {
-          "total_mm": 6.72,
-          "rainy_days_028": 3,
-          "rainy_days_1mm": 2
+          "total_mm": 23.52,
+          "rainy_days_028": 4,
+          "rainy_days_1mm": 3
         }
       },
       "has_manual": true
@@ -1961,9 +1983,22 @@
     ],
     "model": "ecmwf_ifs025",
     "fetched_at": "2026-10-07T11:32:04.160Z",
-    "from_cache": false
+    "from_cache": true
   },
-  "ensemble_2day": null,
-  "daily_narrative": null,
-  "dekadal_narrative": "Rainfall recorded at Kaguguta Agrifarm totalled 37.1mm across 6 rainy days, below the 74.5mm of the second dekad of September and above the 10.6mm of the first, bringing the September total to 122.2mm against a long-term Kilifi climatology of about 52mm. The total was driven mainly by two days: 27 September contributed 20.2mm, the heaviest day, with a peak 2-hour accumulation of 8.7mm, and 21 September added 15.0mm, while the remaining days were dry or recorded 1.1mm or less. The forecast for the next dekad points to a much wetter spell, with 137.3mm expected in total and the largest daily amount, 28.6mm, on 8 October. On the regional scale, a positive Indian Ocean Dipole, a pattern that normally enhances rainfall over East Africa, is expected to develop alongside a strengthening El Niño according to the WMO, and the Kenya Meteorological Service Authority forecasts above-average October to December short rains, naming Kilifi among the counties expected to be wetter than normal."
+  "ensemble_2day": [
+    {
+      "label": "Tomorrow",
+      "date": "2026-10-08",
+      "mean_mm": 13.8,
+      "p75_mm": 18.8
+    },
+    {
+      "label": "Day after",
+      "date": "2026-10-09",
+      "mean_mm": 13.4,
+      "p75_mm": 16.5
+    }
+  ],
+  "daily_narrative": "Kaguguta Agrifarm weather station recorded 16.80 mm of heavy rain on 7 October, following 5.04 mm on 6 October and 0.56 mm on 5 October. This brings the October total to 23.5 mm, all of which fell in the first dekad. The 7 October total ranks below several earlier days in the record, including 27.72 mm on 11 September, 24.08 mm on 18 September and 20.16 mm on 27 September. The ECMWF ensemble forecasts a mean of 13.8 mm for 8 October (75th percentile 18.8 mm) and 13.4 mm for 9 October (75th percentile 16.5 mm), indicating further rain over the next two days.",
+  "dekadal_narrative": "Rainfall recorded at Kaguguta Agrifarm totalled 37.1mm across 6 rainy days, below the 74.5mm of the second dekad of September and above the 10.6mm of the first, bringing the September total to 122.2mm against a long-term Kilifi climatology of about 35mm. The total was driven mainly by two days: 27 September contributed 20.2mm, the heaviest day, with a peak 2-hour accumulation of 8.7mm, and 21 September added 15.0mm, while the remaining days were dry or recorded 1.1mm or less. The forecast for the next dekad points to a much wetter spell, with 137.3mm expected in total and the largest daily amount, 28.6mm, on 8 October. On the regional scale, a positive Indian Ocean Dipole, a pattern that normally enhances rainfall over East Africa, is expected to develop alongside a strengthening El Niño according to the WMO, and the Kenya Meteorological Service Authority forecasts above-average October to December short rains, naming Kilifi among the counties expected to be wetter than normal."
 }
