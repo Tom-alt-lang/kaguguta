@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-10-08T02:28:21.387Z",
-  "today": "2026-10-08",
+  "generated_at": "2026-10-09T02:28:20.913Z",
+  "today": "2026-10-09",
   "yesterday": {
-    "date": "2026-10-07",
-    "total_mm": 16.8,
-    "tip_count": 60,
+    "date": "2026-10-08",
+    "total_mm": 0.56,
+    "tip_count": 2,
     "source": "gauge",
-    "max_instant_mm_h": 22,
-    "max_instant_time": "09:44",
-    "max_5min_mm": 1.12,
-    "max_5min_start": "01:05",
-    "max_5min_end": "01:10",
-    "max_10min_mm": 1.68,
-    "max_10min_start": "09:35",
-    "max_10min_end": "09:45",
-    "max_60min_mm": 5.6,
-    "max_60min_start": "01:05",
-    "max_60min_end": "02:05",
-    "max_120min_mm": 8.12,
-    "max_120min_start": "01:05",
-    "max_120min_end": "03:05"
+    "max_instant_mm_h": 0,
+    "max_instant_time": "02:10",
+    "max_5min_mm": 0.28,
+    "max_5min_start": "02:10",
+    "max_5min_end": "02:15",
+    "max_10min_mm": 0.28,
+    "max_10min_start": "02:10",
+    "max_10min_end": "02:20",
+    "max_60min_mm": 0.28,
+    "max_60min_start": "02:10",
+    "max_60min_end": "03:10",
+    "max_120min_mm": 0.28,
+    "max_120min_start": "02:10",
+    "max_120min_end": "04:10"
   },
   "daily_history": [
     {
@@ -1394,6 +1394,26 @@
       "max_120min_mm": 8.12,
       "max_120min_start": "01:05",
       "max_120min_end": "03:05"
+    },
+    {
+      "date": "2026-10-08",
+      "total_mm": 0.56,
+      "tip_count": 2,
+      "source": "gauge",
+      "max_instant_mm_h": 0,
+      "max_instant_time": "02:10",
+      "max_5min_mm": 0.28,
+      "max_5min_start": "02:10",
+      "max_5min_end": "02:15",
+      "max_10min_mm": 0.28,
+      "max_10min_start": "02:10",
+      "max_10min_end": "02:20",
+      "max_60min_mm": 0.28,
+      "max_60min_start": "02:10",
+      "max_60min_end": "03:10",
+      "max_120min_mm": 0.28,
+      "max_120min_start": "02:10",
+      "max_120min_end": "04:10"
     }
   ],
   "current_dekad": {
@@ -1405,10 +1425,11 @@
       "2026-10-04",
       "2026-10-05",
       "2026-10-06",
-      "2026-10-07"
+      "2026-10-07",
+      "2026-10-08"
     ],
-    "total_mm": 23.52,
-    "rainy_days_028": 4,
+    "total_mm": 24.08,
+    "rainy_days_028": 5,
     "rainy_days_1mm": 3,
     "heaviest_day_mm": 16.8,
     "heaviest_day_date": "2026-10-07",
@@ -1724,10 +1745,11 @@
         "2026-10-04",
         "2026-10-05",
         "2026-10-06",
-        "2026-10-07"
+        "2026-10-07",
+        "2026-10-08"
       ],
-      "total_mm": 23.52,
-      "rainy_days_028": 4,
+      "total_mm": 24.08,
+      "rainy_days_028": 5,
       "rainy_days_1mm": 3,
       "heaviest_day_mm": 16.8,
       "heaviest_day_date": "2026-10-07",
@@ -1848,8 +1870,8 @@
     },
     {
       "month": "2026-10",
-      "total_mm": 23.52,
-      "rainy_days_028": 4,
+      "total_mm": 24.08,
+      "rainy_days_028": 5,
       "rainy_days_1mm": 3,
       "heaviest_day_mm": 16.8,
       "heaviest_day_date": "2026-10-07",
@@ -1874,8 +1896,8 @@
       "max_120min_end": "03:05",
       "dekads": {
         "D1": {
-          "total_mm": 23.52,
-          "rainy_days_028": 4,
+          "total_mm": 24.08,
+          "rainy_days_028": 5,
           "rainy_days_1mm": 3
         }
       },
@@ -1988,17 +2010,17 @@
   "ensemble_2day": [
     {
       "label": "Tomorrow",
-      "date": "2026-10-08",
-      "mean_mm": 13.8,
-      "p75_mm": 18.8
+      "date": "2026-10-09",
+      "mean_mm": 10.3,
+      "p75_mm": 12.4
     },
     {
       "label": "Day after",
-      "date": "2026-10-09",
-      "mean_mm": 13.4,
-      "p75_mm": 16.5
+      "date": "2026-10-10",
+      "mean_mm": 7.9,
+      "p75_mm": 10.1
     }
   ],
-  "daily_narrative": "Kaguguta Agrifarm weather station recorded 16.80 mm of heavy rain on 7 October, following 5.04 mm on 6 October and 0.56 mm on 5 October. This brings the October total to 23.5 mm, all of which fell in the first dekad. The 7 October total ranks below several earlier days in the record, including 27.72 mm on 11 September, 24.08 mm on 18 September and 20.16 mm on 27 September. The ECMWF ensemble forecasts a mean of 13.8 mm for 8 October (75th percentile 18.8 mm) and 13.4 mm for 9 October (75th percentile 16.5 mm), indicating further rain over the next two days.",
+  "daily_narrative": "Kaguguta Agrifarm weather station recorded 0.56 mm on 8 October, a light rain following 16.80 mm on 7 October, which was the heaviest day of the past five. The Oct-D1 dekad and October to date both stand at 24.1 mm, reflecting rain on each of the last four days, so there is currently no dry-day run. The ECMWF ensemble forecast indicates a mean of 10.3 mm on 9 October, with a 75th percentile of 12.4 mm. A mean of 7.9 mm is forecast for 10 October, with a 75th percentile of 10.1 mm.",
   "dekadal_narrative": "Rainfall recorded at Kaguguta Agrifarm totalled 37.1mm across 6 rainy days, below the 74.5mm of the second dekad of September and above the 10.6mm of the first, bringing the September total to 122.2mm against a long-term Kilifi climatology of about 35mm. The total was driven mainly by two days: 27 September contributed 20.2mm, the heaviest day, with a peak 2-hour accumulation of 8.7mm, and 21 September added 15.0mm, while the remaining days were dry or recorded 1.1mm or less. The forecast for the next dekad points to a much wetter spell, with 137.3mm expected in total and the largest daily amount, 28.6mm, on 8 October. On the regional scale, a positive Indian Ocean Dipole, a pattern that normally enhances rainfall over East Africa, is expected to develop alongside a strengthening El Niño according to the WMO, and the Kenya Meteorological Service Authority forecasts above-average October to December short rains, naming Kilifi among the counties expected to be wetter than normal."
 }
