@@ -61,6 +61,13 @@ function formatDekad(dekadStr) {
   const parts  = dekadStr.split("-");
   return months[parseInt(parts[1]) - 1] + "-" + parts[2] + " " + parts[0];
 }
+function formatMonthName(monthStr) {
+  // "2026-09" -> "September 2026"
+  const months = ["January","February","March","April","May","June",
+    "July","August","September","October","November","December"];
+  const parts  = monthStr.split("-");
+  return months[parseInt(parts[1]) - 1] + " " + parts[0];
+}
 function formatDateLong(isoStr) {
   const d = new Date(isoStr);
   return d.getDate() + " " + ["January","February","March","April","May","June",
@@ -87,10 +94,18 @@ fetch("data.json")
       observedEl.innerHTML = "<p>No data available.</p>";
     } else {
       const rainy = y.total_mm > 1;
-      let html = "<p>Date: " + formatDate(y.date) + "</p>";
+        let html = "<p>Date: " + formatDate(y.date) + "</p>";
       html += "<p>Observed rainfall: " + (y.total_mm || 0).toFixed(2) + " mm";
       if (y.source === "manual") html += " (manual" + (y.note ? " — " + y.note : "") + ")";
       html += "</p>";
+
+      if (data.monthly && data.today) {
+        const mo = data.monthly.find(m => m.month === data.today.slice(0, 7));
+        if (mo) {
+          html += "<p>Running " + formatMonthName(mo.month) + " total: " + mo.total_mm.toFixed(1) + " mm</p>";
+        }
+      }
+
       if (rainy) {
         if (y.max_instant_mm_h !== null && y.max_instant_mm_h !== undefined)
           html += "<p>Max instantaneous rate: " + y.max_instant_mm_h + " mm/h at " + (y.max_instant_time || "—") + "</p>";
