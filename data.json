@@ -1,25 +1,10 @@
 {
-  "generated_at": "2026-10-09T02:28:20.913Z",
-  "today": "2026-10-09",
+  "generated_at": "2026-10-10T02:28:20.658Z",
+  "today": "2026-10-10",
   "yesterday": {
-    "date": "2026-10-08",
-    "total_mm": 0.56,
-    "tip_count": 2,
-    "source": "gauge",
-    "max_instant_mm_h": 0,
-    "max_instant_time": "02:10",
-    "max_5min_mm": 0.28,
-    "max_5min_start": "02:10",
-    "max_5min_end": "02:15",
-    "max_10min_mm": 0.28,
-    "max_10min_start": "02:10",
-    "max_10min_end": "02:20",
-    "max_60min_mm": 0.28,
-    "max_60min_start": "02:10",
-    "max_60min_end": "03:10",
-    "max_120min_mm": 0.28,
-    "max_120min_start": "02:10",
-    "max_120min_end": "04:10"
+    "date": "2026-10-09",
+    "total_mm": 0,
+    "source": "no_data"
   },
   "daily_history": [
     {
@@ -2010,17 +1995,17 @@
   "ensemble_2day": [
     {
       "label": "Tomorrow",
-      "date": "2026-10-09",
-      "mean_mm": 10.3,
-      "p75_mm": 12.4
+      "date": "2026-10-10",
+      "mean_mm": 4.6,
+      "p75_mm": 5
     },
     {
       "label": "Day after",
-      "date": "2026-10-10",
-      "mean_mm": 7.9,
-      "p75_mm": 10.1
+      "date": "2026-10-11",
+      "mean_mm": 1.6,
+      "p75_mm": 2.3
     }
   ],
-  "daily_narrative": "Kaguguta Agrifarm weather station recorded 0.56 mm on 8 October, a light rain following 16.80 mm on 7 October, which was the heaviest day of the past five. The Oct-D1 dekad and October to date both stand at 24.1 mm, reflecting rain on each of the last four days, so there is currently no dry-day run. The ECMWF ensemble forecast indicates a mean of 10.3 mm on 9 October, with a 75th percentile of 12.4 mm. A mean of 7.9 mm is forecast for 10 October, with a 75th percentile of 10.1 mm.",
+  "daily_narrative": "Kaguguta Agrifarm weather station recorded 16.80 mm of rain on 7 October, the heaviest day of the past five, following 5.04 mm on 6 October and only light rain of 0.56 mm on 5 and 8 October. No data was available for yesterday, and the station has one consecutive dry day logged. The first dekad of October has accumulated 24.1 mm, which is also the month-to-date total. The ECMWF ensemble forecast indicates a mean of 4.6 mm for 10 October, with a 75th percentile of 5 mm, and a mean of 1.6 mm for 11 October, with a 75th percentile of 2.3 mm.",
   "dekadal_narrative": "Rainfall recorded at Kaguguta Agrifarm totalled 37.1mm across 6 rainy days, below the 74.5mm of the second dekad of September and above the 10.6mm of the first, bringing the September total to 122.2mm against a long-term Kilifi climatology of about 35mm. The total was driven mainly by two days: 27 September contributed 20.2mm, the heaviest day, with a peak 2-hour accumulation of 8.7mm, and 21 September added 15.0mm, while the remaining days were dry or recorded 1.1mm or less. The forecast for the next dekad points to a much wetter spell, with 137.3mm expected in total and the largest daily amount, 28.6mm, on 8 October. On the regional scale, a positive Indian Ocean Dipole, a pattern that normally enhances rainfall over East Africa, is expected to develop alongside a strengthening El Niño according to the WMO, and the Kenya Meteorological Service Authority forecasts above-average October to December short rains, naming Kilifi among the counties expected to be wetter than normal."
 }
