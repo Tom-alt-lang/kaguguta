@@ -27,6 +27,18 @@
 
 <b>Commentary</b>
 <p id="claude-narrative"></p>
+
+<div id="dekadal-review" style="display:none;">
+  <hr>
+  <b id="daily-breakdown-heading">Daily breakdown</b>
+  <div id="daily-breakdown"></div>
+  <p id="dekad-total" style="margin-top:8px;"></p>
+  <hr>
+  <b>Dekadal forecast breakdown</b>
+  <div id="dekad-forecast-breakdown"></div>
+  <p id="dekad-forecast-total" style="margin-top:8px;"></p>
+</div>
+
 <hr>
 
 <p><a href="index.html">← Back</a></p>
@@ -44,10 +56,19 @@ function formatDateShort(dateStr) {
   const parts  = dateStr.split("-");
   return parseInt(parts[2]) + " " + months[parseInt(parts[1]) - 1];
 }
+function formatDekad(dekadStr) {
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const parts  = dekadStr.split("-");
+  return months[parseInt(parts[1]) - 1] + "-" + parts[2] + " " + parts[0];
+}
 function formatDateLong(isoStr) {
   const d = new Date(isoStr);
   return d.getDate() + " " + ["January","February","March","April","May","June",
     "July","August","September","October","November","December"][d.getMonth()] + " " + d.getFullYear();
+}
+function isDecadalDay(dateStr) {
+  const day = parseInt(dateStr.slice(8, 10));
+  return day === 1 || day === 11 || day === 21;
 }
 
 fetch("data.json")
@@ -90,7 +111,11 @@ fetch("data.json")
       observedEl.innerHTML = html;
     }
 
-       const forecastEl = document.getElementById("forecast");
+    // Forecast — Today / Tomorrow (date) / date. Labels come straight from
+    // ensemble_2day[].label now (set server-side); no more idx-based guess
+    // and no more misattributed "(cached)" note borrowed from the
+    // unrelated deterministic-forecast cache flag.
+    const forecastEl = document.getElementById("forecast");
     const ens = data.ensemble_2day;
     if (ens && ens.length > 0) {
       let html = "";
@@ -107,6 +132,9 @@ fetch("data.json")
       forecastEl.innerHTML = "<p>No forecast data available.</p>";
     }
 
+    // Commentary — always shown; on reporting days this text already
+    // contains the dekad review (generated that way server-side), so no
+    // separate heading or suppression logic is needed here.
     const narrative = data.daily_narrative;
     const narrativeEl = document.getElementById("claude-narrative");
     if (narrative) {
@@ -117,6 +145,50 @@ fetch("data.json")
       narrativeEl.textContent = "Kaguguta agrifarm STN recorded no rainfall today.";
     }
 
+    // Reporting-day extra: daily breakdown for the dekad just closed, and
+    // the forecast breakdown for the dekad ahead — both reusing data already
+    // in the payload (previous_dekad, daily_history, forecast.daily). No
+    // dekadal stat lines (rainy days, heaviest day, etc.) are rendered here
+    // on purpose — the commentary above already covers those in prose.
+    if (data.today && isDecadalDay(data.today) && data.previous_dekad) {
+      const dk = data.previous_dekad;
+      const reviewEl = document.getElementById("dekadal-review");
+
+      document.getElementById("daily-breakdown-heading").textContent =
+        "Daily breakdown — " + formatDekad(dk.dekad);
+
+      const breakdownEl = document.getElementById("daily-breakdown");
+      if (data.daily_history && dk.days) {
+        const dekadDays = data.daily_history.filter(d => dk.days.includes(d.date));
+        dekadDays.forEach(d => {
+          const p = document.createElement("p");
+          p.textContent = formatDateShort(d.date) + ": " + (d.total_mm || 0).toFixed(2) + " mm";
+          breakdownEl.appendChild(p);
+        });
+      }
+      document.getElementById("dekad-total").textContent =
+        formatDekad(dk.dekad) + " total: " + (dk.total_mm || 0).toFixed(1) + " mm";
+
+      const fcBreakdownEl = document.getElementById("dekad-forecast-breakdown");
+      if (data.forecast && data.forecast.daily && data.forecast.daily.length > 0) {
+        const nextDekad = data.forecast.daily.slice(1, 11);
+        let total = 0;
+        nextDekad.forEach(d => {
+          const mm = d.precip_mm || 0;
+          total += mm;
+          const p = document.createElement("p");
+          p.textContent = formatDateShort(d.date) + ": " + mm.toFixed(1) + " mm";
+          fcBreakdownEl.appendChild(p);
+        });
+        document.getElementById("dekad-forecast-total").textContent =
+          "Forecast dekadal total: " + total.toFixed(1) + " mm";
+      } else {
+        fcBreakdownEl.innerHTML = "<p>No forecast data available.</p>";
+      }
+
+      reviewEl.style.display = "block";
+    }
+
   })
   .catch(err => {
     document.body.innerHTML += "<p>Error loading data.json: " + err.message + "</p>";
@@ -124,4 +196,3 @@ fetch("data.json")
 </script>
 </body>
 </html>
-
