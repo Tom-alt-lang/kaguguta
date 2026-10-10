@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kaguguta Agrifarm — Dekadal Rainfall Report</title>
+<title>Kaguguta Agrifarm — Daily Rainfall Report</title>
 <style>
   body { font-family: "Times New Roman", Times, serif; }
   p { margin: 0; }
@@ -13,36 +13,34 @@
 </head>
 <body>
 
-<h2>Dekadal Rainfall Report</h2>
+<img src="assets/logo.png" alt="Kaguguta Agrifarm" style="height:22px; width:auto; display:block; margin-bottom:6px;">
+<h2>Daily Rainfall Report</h2>
 <p id="generated-at"></p>
-<p id="dekad-title"></p>
 <hr>
 
-<b>Observed</b>
-<p id="total-rainfall"></p>
-<p id="rainy-days-028"></p>
-<p id="rainy-days-1mm"></p>
-<p id="heaviest-day"></p>
-<p id="month-running-total"></p>
-
-<b>Daily breakdown</b>
-<div id="daily-breakdown"></div>
+<div id="observed"></div>
 <hr>
 
-<b>Short-duration intensity peaks</b>
-<div id="intensity-peaks"></div>
-<hr>
-
-<b>Forecast — next dekad (ECMWF deterministic)</b>
-<div id="forecast-days"></div>
-<p id="forecast-total"></p>
+<b>Forecast</b>
+<div id="forecast"></div>
 <hr>
 
 <b>Commentary</b>
 <p id="claude-narrative"></p>
+
+<div id="dekadal-review" style="display:none;">
+  <hr>
+  <b id="daily-breakdown-heading">Daily breakdown</b>
+  <div id="daily-breakdown"></div>
+  <p id="dekad-total" style="margin-top:8px;"></p>
+  <hr>
+  <b>Dekadal forecast breakdown</b>
+  <div id="dekad-forecast-breakdown"></div>
+  <p id="dekad-forecast-total" style="margin-top:8px;"></p>
+</div>
+
 <hr>
 
-<p><a href="chart/dekadal_chart.jpg" target="_blank">Annual dekadal chart</a></p>
 <p><a href="index.html">← Back</a></p>
 <hr>
 <p style="font-size:0.8em;">Copyright &copy; 2026 <span style="font-weight:bold;">Kaguguta agrifarm Ltd.</span> Internal website.</p>
@@ -63,16 +61,14 @@ function formatDekad(dekadStr) {
   const parts  = dekadStr.split("-");
   return months[parseInt(parts[1]) - 1] + "-" + parts[2] + " " + parts[0];
 }
-function formatMonth(monthStr) {
-  const months = ["January","February","March","April","May","June",
-    "July","August","September","October","November","December"];
-  const parts  = monthStr.split("-");
-  return months[parseInt(parts[1]) - 1] + " " + parts[0];
-}
 function formatDateLong(isoStr) {
   const d = new Date(isoStr);
   return d.getDate() + " " + ["January","February","March","April","May","June",
     "July","August","September","October","November","December"][d.getMonth()] + " " + d.getFullYear();
+}
+function isDecadalDay(dateStr) {
+  const day = parseInt(dateStr.slice(8, 10));
+  return day === 1 || day === 11 || day === 21;
 }
 
 fetch("data.json")
@@ -84,106 +80,113 @@ fetch("data.json")
         "Last updated: " + formatDateLong(data.generated_at);
     }
 
-    const dk = data.previous_dekad;
-    if (!dk) {
-      document.getElementById("dekad-title").textContent = "No completed dekad data available.";
-      return;
-    }
+    const y = data.yesterday;
+    const observedEl = document.getElementById("observed");
 
-    document.getElementById("dekad-title").textContent = "Dekad: " + formatDekad(dk.dekad);
-    document.getElementById("total-rainfall").textContent =
-      "Total rainfall: " + (dk.total_mm || 0).toFixed(2) + " mm";
-    document.getElementById("rainy-days-028").textContent =
-      "Rainy days: " + dk.rainy_days_028;
-    document.getElementById("rainy-days-1mm").textContent =
-      "Rainy days (>1 mm): " + dk.rainy_days_1mm;
-    document.getElementById("heaviest-day").textContent =
-      "Heaviest day: " + (dk.heaviest_day_date ? formatDateShort(dk.heaviest_day_date) : "—") +
-      " — " + (dk.heaviest_day_mm || 0).toFixed(2) + " mm";
-
-    // Month running total — single line, pulled from the monthly summary
-    const monthRunningEl = document.getElementById("month-running-total");
-    if (data.monthly && data.monthly.length > 0) {
-      const currentMonth = dk.dekad.slice(0, 7);
-      const mo = data.monthly.find(m => m.month === currentMonth);
-      if (mo) {
-        monthRunningEl.textContent = formatMonth(mo.month) + " running total: " + mo.total_mm.toFixed(1) + " mm";
+    if (!y) {
+      observedEl.innerHTML = "<p>No data available.</p>";
+    } else {
+      const rainy = y.total_mm > 1;
+      let html = "<p>Date: " + formatDate(y.date) + "</p>";
+      html += "<p>Observed rainfall: " + (y.total_mm || 0).toFixed(2) + " mm";
+      if (y.source === "manual") html += " (manual" + (y.note ? " — " + y.note : "") + ")";
+      html += "</p>";
+      if (rainy) {
+        if (y.max_instant_mm_h !== null && y.max_instant_mm_h !== undefined)
+          html += "<p>Max instantaneous rate: " + y.max_instant_mm_h + " mm/h at " + (y.max_instant_time || "—") + "</p>";
+        if (y.max_5min_mm !== null && y.max_5min_mm !== undefined)
+          html += "<p>Max 5-min: " + y.max_5min_mm.toFixed(2) + " mm (" + (y.max_5min_start || "—") + "–" + (y.max_5min_end || "—") + ")</p>";
+        if (y.max_10min_mm !== null && y.max_10min_mm !== undefined)
+          html += "<p>Max 10-min: " + y.max_10min_mm.toFixed(2) + " mm (" + (y.max_10min_start || "—") + "–" + (y.max_10min_end || "—") + ")</p>";
+        if (y.max_60min_mm !== null && y.max_60min_mm !== undefined)
+          html += "<p>Max 1-hour: " + y.max_60min_mm.toFixed(2) + " mm (" + (y.max_60min_start || "—") + "–" + (y.max_60min_end || "—") + ")</p>";
+        if (y.max_120min_mm !== null && y.max_120min_mm !== undefined)
+          html += "<p>Max 2-hour: " + y.max_120min_mm.toFixed(2) + " mm (" + (y.max_120min_start || "—") + "–" + (y.max_120min_end || "—") + ")</p>";
+        // Assumed path: chart/daily/YYYY-MM-DD.jpg, pushed by the GitHub
+        // Workflow we'll build next — adjust this path once that's in place
+        // if the actual naming convention ends up different.
+        html += '<p style="margin-top:10px;"><a href="chart/daily/' + y.date + '.jpg" target="_blank" ' +
+          'style="display:inline-block; padding:6px 14px; border:1px solid #333; text-decoration:none; color:inherit; font-size:0.9em;">Daily chart figure</a></p>';
       }
+      observedEl.innerHTML = html;
     }
 
-    // Daily breakdown
-    const breakdownEl = document.getElementById("daily-breakdown");
-    if (data.daily_history && dk.days) {
-      const dekadDays = data.daily_history.filter(d => dk.days.includes(d.date));
-      if (dekadDays.length > 0) {
-        dekadDays.forEach(d => {
-          const p = document.createElement("p");
-                  const line = formatDateShort(d.date) + ": " + (d.total_mm || 0).toFixed(2) + " mm";
-          p.textContent = line;
-          breakdownEl.appendChild(p);
-        });
-      } else {
-        breakdownEl.innerHTML = "<p>No daily data available.</p>";
-      }
-    }
-
-    // Intensity peaks — "at X on Y" style throughout, no parentheses
-    const intensityEl = document.getElementById("intensity-peaks");
-    const metrics = [
-      { label: "Max instantaneous rate", val: "max_instant_mm_h", unit: "mm/h",
-        time: d => d.max_instant_time ? " at " + d.max_instant_time + " on " + formatDateShort(d.max_instant_date) : "" },
-      { label: "Max 5-min",  val: "max_5min_mm",  unit: "mm",
-        time: d => d.max_5min_start  ? " at " + d.max_5min_start  + "–" + d.max_5min_end  + " on " + formatDateShort(d.max_5min_date)  : "" },
-      { label: "Max 10-min", val: "max_10min_mm", unit: "mm",
-        time: d => d.max_10min_start ? " at " + d.max_10min_start + "–" + d.max_10min_end + " on " + formatDateShort(d.max_10min_date) : "" },
-      { label: "Max 1-hour", val: "max_60min_mm", unit: "mm",
-        time: d => d.max_60min_start ? " at " + d.max_60min_start + "–" + d.max_60min_end + " on " + formatDateShort(d.max_60min_date) : "" },
-      { label: "Max 2-hour", val: "max_120min_mm", unit: "mm",
-        time: d => d.max_120min_start ? " at " + d.max_120min_start + "–" + d.max_120min_end + " on " + formatDateShort(d.max_120min_date) : "" },
-    ];
-    let hasIntensity = false;
-    metrics.forEach(m => {
-      if (dk[m.val] !== null && dk[m.val] !== undefined) {
-        hasIntensity = true;
-        const p = document.createElement("p");
-        const val = m.unit === "mm/h" ? dk[m.val] : dk[m.val].toFixed(2);
-        p.textContent = m.label + ": " + val + " " + m.unit + m.time(dk);
-        intensityEl.appendChild(p);
-      }
-    });
-    if (!hasIntensity) {
-      intensityEl.innerHTML = "<p>No intensity data available (dry dekad or manual entries only).</p>";
-    }
-
-    // Forecast
-    const forecastEl = document.getElementById("forecast-days");
-    if (data.forecast && data.forecast.daily && data.forecast.daily.length > 0) {
-      const nextDekad = data.forecast.daily.slice(1, 11);
-      let total = 0;
-      nextDekad.forEach(d => {
-        const mm = d.precip_mm || 0;
-        total += mm;
-        const p = document.createElement("p");
-        p.textContent = formatDateShort(d.date) + ": " + mm.toFixed(1) + " mm";
-        forecastEl.appendChild(p);
+    // Forecast — Today / Tomorrow (date) / date. Labels come straight from
+    // ensemble_2day[].label now (set server-side); no more idx-based guess
+    // and no more misattributed "(cached)" note borrowed from the
+    // unrelated deterministic-forecast cache flag.
+    const forecastEl = document.getElementById("forecast");
+    const ens = data.ensemble_2day;
+    if (ens && ens.length > 0) {
+      let html = "";
+      ens.forEach(e => {
+        const label = e.label
+          ? e.label + (e.label === "Tomorrow" ? " (" + formatDateShort(e.date) + ")" : "")
+          : formatDateShort(e.date);
+        html += "<p>" + label + ": " +
+          (e.mean_mm || 0).toFixed(1) + " mm, 75th perc: " +
+          (e.p75_mm !== null ? e.p75_mm.toFixed(1) : "—") + " mm</p>";
       });
-      document.getElementById("forecast-total").textContent =
-        "Forecast dekadal total: " + total.toFixed(1) + " mm";
-      if (data.forecast.from_cache) {
-        forecastEl.innerHTML += "<p style='font-size:0.85em; color:#888;'>Forecast from " + formatDateLong(data.forecast.fetched_at) + " (cached).</p>";
-      }
+      forecastEl.innerHTML = html;
     } else {
       forecastEl.innerHTML = "<p>No forecast data available.</p>";
     }
 
-    // Commentary
-    const narrative = data.dekadal_narrative;
+    // Commentary — always shown; on reporting days this text already
+    // contains the dekad review (generated that way server-side), so no
+    // separate heading or suppression logic is needed here.
+    const narrative = data.daily_narrative;
     const narrativeEl = document.getElementById("claude-narrative");
     if (narrative) {
+      narrativeEl.style.fontStyle = "normal";
       narrativeEl.textContent = narrative;
     } else {
       narrativeEl.style.fontStyle = "italic";
-      narrativeEl.textContent = "No commentary generated for this dekad.";
+      narrativeEl.textContent = "Kaguguta agrifarm STN recorded no rainfall today.";
+    }
+
+    // Reporting-day extra: daily breakdown for the dekad just closed, and
+    // the forecast breakdown for the dekad ahead — both reusing data already
+    // in the payload (previous_dekad, daily_history, forecast.daily). No
+    // dekadal stat lines (rainy days, heaviest day, etc.) are rendered here
+    // on purpose — the commentary above already covers those in prose.
+    if (data.today && isDecadalDay(data.today) && data.previous_dekad) {
+      const dk = data.previous_dekad;
+      const reviewEl = document.getElementById("dekadal-review");
+
+      document.getElementById("daily-breakdown-heading").textContent =
+        "Daily breakdown — " + formatDekad(dk.dekad);
+
+      const breakdownEl = document.getElementById("daily-breakdown");
+      if (data.daily_history && dk.days) {
+        const dekadDays = data.daily_history.filter(d => dk.days.includes(d.date));
+        dekadDays.forEach(d => {
+          const p = document.createElement("p");
+          p.textContent = formatDateShort(d.date) + ": " + (d.total_mm || 0).toFixed(2) + " mm";
+          breakdownEl.appendChild(p);
+        });
+      }
+      document.getElementById("dekad-total").textContent =
+        formatDekad(dk.dekad) + " total: " + (dk.total_mm || 0).toFixed(1) + " mm";
+
+      const fcBreakdownEl = document.getElementById("dekad-forecast-breakdown");
+      if (data.forecast && data.forecast.daily && data.forecast.daily.length > 0) {
+        const nextDekad = data.forecast.daily.slice(1, 11);
+        let total = 0;
+        nextDekad.forEach(d => {
+          const mm = d.precip_mm || 0;
+          total += mm;
+          const p = document.createElement("p");
+          p.textContent = formatDateShort(d.date) + ": " + mm.toFixed(1) + " mm";
+          fcBreakdownEl.appendChild(p);
+        });
+        document.getElementById("dekad-forecast-total").textContent =
+          "Forecast dekadal total: " + total.toFixed(1) + " mm";
+      } else {
+        fcBreakdownEl.innerHTML = "<p>No forecast data available.</p>";
+      }
+
+      reviewEl.style.display = "block";
     }
 
   })
