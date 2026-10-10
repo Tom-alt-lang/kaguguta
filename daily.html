@@ -90,19 +90,18 @@ fetch("data.json")
       observedEl.innerHTML = html;
     }
 
-    const forecastEl = document.getElementById("forecast");
+       const forecastEl = document.getElementById("forecast");
     const ens = data.ensemble_2day;
     if (ens && ens.length > 0) {
       let html = "";
-      ens.forEach((e, idx) => {
-        const label = idx === 0 ? "Tomorrow (" + formatDateShort(e.date) + ")" : formatDateShort(e.date);
+      ens.forEach(e => {
+        const label = e.label
+          ? e.label + (e.label === "Tomorrow" ? " (" + formatDateShort(e.date) + ")" : "")
+          : formatDateShort(e.date);
         html += "<p>" + label + ": " +
           (e.mean_mm || 0).toFixed(1) + " mm, 75th perc: " +
           (e.p75_mm !== null ? e.p75_mm.toFixed(1) : "—") + " mm</p>";
       });
-      if (data.forecast && data.forecast.from_cache) {
-        html += "<p style='font-size:0.85em; color:#888;'>Forecast from " + formatDateLong(data.forecast.fetched_at) + " (cached).</p>";
-      }
       forecastEl.innerHTML = html;
     } else {
       forecastEl.innerHTML = "<p>No forecast data available.</p>";
