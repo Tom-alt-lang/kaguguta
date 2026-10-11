@@ -1,10 +1,25 @@
 {
-  "generated_at": "2026-10-10T02:28:20.658Z",
-  "today": "2026-10-10",
+  "generated_at": "2026-10-11T02:28:39.463Z",
+  "today": "2026-10-11",
   "yesterday": {
-    "date": "2026-10-09",
-    "total_mm": 0,
-    "source": "no_data"
+    "date": "2026-10-10",
+    "total_mm": 9.8,
+    "tip_count": 35,
+    "source": "gauge",
+    "max_instant_mm_h": 50,
+    "max_instant_time": "06:47",
+    "max_5min_mm": 2.52,
+    "max_5min_start": "06:45",
+    "max_5min_end": "06:50",
+    "max_10min_mm": 3.36,
+    "max_10min_start": "06:43",
+    "max_10min_end": "06:53",
+    "max_60min_mm": 7.28,
+    "max_60min_start": "05:55",
+    "max_60min_end": "06:55",
+    "max_120min_mm": 7.28,
+    "max_120min_start": "05:55",
+    "max_120min_end": "07:55"
   },
   "daily_history": [
     {
@@ -1399,9 +1414,50 @@
       "max_120min_mm": 0.28,
       "max_120min_start": "02:10",
       "max_120min_end": "04:10"
+    },
+    {
+      "date": "2026-10-09",
+      "total_mm": 0,
+      "tip_count": 0,
+      "source": "gauge",
+      "max_instant_mm_h": null,
+      "max_instant_time": null,
+      "max_5min_mm": null,
+      "max_5min_start": null,
+      "max_5min_end": null,
+      "max_10min_mm": null,
+      "max_10min_start": null,
+      "max_10min_end": null,
+      "max_60min_mm": null,
+      "max_60min_start": null,
+      "max_60min_end": null,
+      "max_120min_mm": null,
+      "max_120min_start": null,
+      "max_120min_end": null
+    },
+    {
+      "date": "2026-10-10",
+      "total_mm": 9.8,
+      "tip_count": 35,
+      "source": "gauge",
+      "max_instant_mm_h": 50,
+      "max_instant_time": "06:47",
+      "max_5min_mm": 2.52,
+      "max_5min_start": "06:45",
+      "max_5min_end": "06:50",
+      "max_10min_mm": 3.36,
+      "max_10min_start": "06:43",
+      "max_10min_end": "06:53",
+      "max_60min_mm": 7.28,
+      "max_60min_start": "05:55",
+      "max_60min_end": "06:55",
+      "max_120min_mm": 7.28,
+      "max_120min_start": "05:55",
+      "max_120min_end": "07:55"
     }
   ],
-  "current_dekad": {
+  "current_dekad": null,
+  "previous_dekad": {
     "dekad": "2026-10-D1",
     "days": [
       "2026-10-01",
@@ -1411,72 +1467,34 @@
       "2026-10-05",
       "2026-10-06",
       "2026-10-07",
-      "2026-10-08"
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-10"
     ],
-    "total_mm": 24.08,
-    "rainy_days_028": 5,
-    "rainy_days_1mm": 3,
+    "total_mm": 33.88,
+    "rainy_days_028": 6,
+    "rainy_days_1mm": 4,
     "heaviest_day_mm": 16.8,
     "heaviest_day_date": "2026-10-07",
     "max_instant_mm_h": 67,
     "max_instant_date": "2026-10-05",
     "max_instant_time": "08:57",
-    "max_5min_mm": 1.12,
-    "max_5min_date": "2026-10-06",
-    "max_5min_start": "22:35",
-    "max_5min_end": "22:40",
-    "max_10min_mm": 1.68,
-    "max_10min_date": "2026-10-06",
-    "max_10min_start": "22:33",
-    "max_10min_end": "22:43",
-    "max_60min_mm": 5.6,
-    "max_60min_date": "2026-10-07",
-    "max_60min_start": "01:05",
-    "max_60min_end": "02:05",
+    "max_5min_mm": 2.52,
+    "max_5min_date": "2026-10-10",
+    "max_5min_start": "06:45",
+    "max_5min_end": "06:50",
+    "max_10min_mm": 3.36,
+    "max_10min_date": "2026-10-10",
+    "max_10min_start": "06:43",
+    "max_10min_end": "06:53",
+    "max_60min_mm": 7.28,
+    "max_60min_date": "2026-10-10",
+    "max_60min_start": "05:55",
+    "max_60min_end": "06:55",
     "max_120min_mm": 8.12,
     "max_120min_date": "2026-10-07",
     "max_120min_start": "01:05",
     "max_120min_end": "03:05",
-    "has_manual": true
-  },
-  "previous_dekad": {
-    "dekad": "2026-09-D3",
-    "days": [
-      "2026-09-21",
-      "2026-09-22",
-      "2026-09-23",
-      "2026-09-24",
-      "2026-09-25",
-      "2026-09-26",
-      "2026-09-27",
-      "2026-09-28",
-      "2026-09-29",
-      "2026-09-30"
-    ],
-    "total_mm": 37.12,
-    "rainy_days_028": 6,
-    "rainy_days_1mm": 3,
-    "heaviest_day_mm": 20.16,
-    "heaviest_day_date": "2026-09-27",
-    "max_instant_mm_h": 53,
-    "max_instant_date": "2026-09-27",
-    "max_instant_time": "08:42",
-    "max_5min_mm": 2.52,
-    "max_5min_date": "2026-09-27",
-    "max_5min_start": "08:37",
-    "max_5min_end": "08:42",
-    "max_10min_mm": 3.08,
-    "max_10min_date": "2026-09-27",
-    "max_10min_start": "08:33",
-    "max_10min_end": "08:43",
-    "max_60min_mm": 5.04,
-    "max_60min_date": "2026-09-27",
-    "max_60min_start": "11:16",
-    "max_60min_end": "12:16",
-    "max_120min_mm": 8.68,
-    "max_120min_date": "2026-09-27",
-    "max_120min_start": "11:16",
-    "max_120min_end": "13:16",
     "has_manual": true
   },
   "all_dekadals": [
@@ -1731,28 +1749,30 @@
         "2026-10-05",
         "2026-10-06",
         "2026-10-07",
-        "2026-10-08"
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-10"
       ],
-      "total_mm": 24.08,
-      "rainy_days_028": 5,
-      "rainy_days_1mm": 3,
+      "total_mm": 33.88,
+      "rainy_days_028": 6,
+      "rainy_days_1mm": 4,
       "heaviest_day_mm": 16.8,
       "heaviest_day_date": "2026-10-07",
       "max_instant_mm_h": 67,
       "max_instant_date": "2026-10-05",
       "max_instant_time": "08:57",
-      "max_5min_mm": 1.12,
-      "max_5min_date": "2026-10-06",
-      "max_5min_start": "22:35",
-      "max_5min_end": "22:40",
-      "max_10min_mm": 1.68,
-      "max_10min_date": "2026-10-06",
-      "max_10min_start": "22:33",
-      "max_10min_end": "22:43",
-      "max_60min_mm": 5.6,
-      "max_60min_date": "2026-10-07",
-      "max_60min_start": "01:05",
-      "max_60min_end": "02:05",
+      "max_5min_mm": 2.52,
+      "max_5min_date": "2026-10-10",
+      "max_5min_start": "06:45",
+      "max_5min_end": "06:50",
+      "max_10min_mm": 3.36,
+      "max_10min_date": "2026-10-10",
+      "max_10min_start": "06:43",
+      "max_10min_end": "06:53",
+      "max_60min_mm": 7.28,
+      "max_60min_date": "2026-10-10",
+      "max_60min_start": "05:55",
+      "max_60min_end": "06:55",
       "max_120min_mm": 8.12,
       "max_120min_date": "2026-10-07",
       "max_120min_start": "01:05",
@@ -1855,35 +1875,35 @@
     },
     {
       "month": "2026-10",
-      "total_mm": 24.08,
-      "rainy_days_028": 5,
-      "rainy_days_1mm": 3,
+      "total_mm": 33.88,
+      "rainy_days_028": 6,
+      "rainy_days_1mm": 4,
       "heaviest_day_mm": 16.8,
       "heaviest_day_date": "2026-10-07",
       "max_instant_mm_h": 67,
       "max_instant_date": "2026-10-05",
       "max_instant_time": "08:57",
-      "max_5min_mm": 1.12,
-      "max_5min_date": "2026-10-06",
-      "max_5min_start": "22:35",
-      "max_5min_end": "22:40",
-      "max_10min_mm": 1.68,
-      "max_10min_date": "2026-10-06",
-      "max_10min_start": "22:33",
-      "max_10min_end": "22:43",
-      "max_60min_mm": 5.6,
-      "max_60min_date": "2026-10-07",
-      "max_60min_start": "01:05",
-      "max_60min_end": "02:05",
+      "max_5min_mm": 2.52,
+      "max_5min_date": "2026-10-10",
+      "max_5min_start": "06:45",
+      "max_5min_end": "06:50",
+      "max_10min_mm": 3.36,
+      "max_10min_date": "2026-10-10",
+      "max_10min_start": "06:43",
+      "max_10min_end": "06:53",
+      "max_60min_mm": 7.28,
+      "max_60min_date": "2026-10-10",
+      "max_60min_start": "05:55",
+      "max_60min_end": "06:55",
       "max_120min_mm": 8.12,
       "max_120min_date": "2026-10-07",
       "max_120min_start": "01:05",
       "max_120min_end": "03:05",
       "dekads": {
         "D1": {
-          "total_mm": 24.08,
-          "rainy_days_028": 5,
-          "rainy_days_1mm": 3
+          "total_mm": 33.88,
+          "rainy_days_028": 6,
+          "rainy_days_1mm": 4
         }
       },
       "has_manual": true
@@ -1892,120 +1912,119 @@
   "forecast": {
     "daily": [
       {
-        "date": "2026-10-06",
-        "precip_mm": 6.9,
-        "precip_prob": 94,
-        "weathercode": 53
-      },
-      {
-        "date": "2026-10-07",
-        "precip_mm": 2.4,
-        "precip_prob": 80,
-        "weathercode": 51
-      },
-      {
-        "date": "2026-10-08",
-        "precip_mm": 28.6,
-        "precip_prob": 100,
-        "weathercode": 80
-      },
-      {
-        "date": "2026-10-09",
-        "precip_mm": 12.4,
-        "precip_prob": 100,
-        "weathercode": 80
-      },
-      {
-        "date": "2026-10-10",
-        "precip_mm": 12.2,
-        "precip_prob": 94,
-        "weathercode": 80
-      },
-      {
         "date": "2026-10-11",
-        "precip_mm": 17.4,
-        "precip_prob": 92,
-        "weathercode": 61
+        "precip_mm": 5.7,
+        "precip_prob": 81,
+        "weathercode": 53
       },
       {
         "date": "2026-10-12",
-        "precip_mm": 21.3,
-        "precip_prob": 83,
-        "weathercode": 61
-      },
-      {
-        "date": "2026-10-13",
-        "precip_mm": 21.4,
-        "precip_prob": 88,
-        "weathercode": 80
-      },
-      {
-        "date": "2026-10-14",
-        "precip_mm": 16.8,
-        "precip_prob": 76,
-        "weathercode": 80
-      },
-      {
-        "date": "2026-10-15",
-        "precip_mm": 2,
-        "precip_prob": 71,
+        "precip_mm": 1.1,
+        "precip_prob": 57,
         "weathercode": 51
       },
       {
+        "date": "2026-10-13",
+        "precip_mm": 0.7,
+        "precip_prob": 67,
+        "weathercode": 51
+      },
+      {
+        "date": "2026-10-14",
+        "precip_mm": 19.9,
+        "precip_prob": 94,
+        "weathercode": 63
+      },
+      {
+        "date": "2026-10-15",
+        "precip_mm": 19.4,
+        "precip_prob": 86,
+        "weathercode": 63
+      },
+      {
         "date": "2026-10-16",
-        "precip_mm": 2.8,
-        "precip_prob": 90,
-        "weathercode": 53
+        "precip_mm": 0.4,
+        "precip_prob": 50,
+        "weathercode": 3
       },
       {
         "date": "2026-10-17",
-        "precip_mm": 19.4,
-        "precip_prob": 88,
-        "weathercode": 61
+        "precip_mm": 4.6,
+        "precip_prob": 80,
+        "weathercode": 53
       },
       {
         "date": "2026-10-18",
-        "precip_mm": 7.6,
-        "precip_prob": 73,
+        "precip_mm": 5.6,
+        "precip_prob": 86,
         "weathercode": 53
       },
       {
         "date": "2026-10-19",
-        "precip_mm": 5.6,
-        "precip_prob": 61,
-        "weathercode": 51
+        "precip_mm": 8.2,
+        "precip_prob": 75,
+        "weathercode": 53
       },
       {
         "date": "2026-10-20",
-        "precip_mm": 8.4,
-        "precip_prob": null,
-        "weathercode": 55
+        "precip_mm": 2.8,
+        "precip_prob": 75,
+        "weathercode": 51
       },
       {
         "date": "2026-10-21",
+        "precip_mm": 7,
+        "precip_prob": 71,
+        "weathercode": 55
+      },
+      {
+        "date": "2026-10-22",
+        "precip_mm": 5.8,
+        "precip_prob": 84,
+        "weathercode": 53
+      },
+      {
+        "date": "2026-10-23",
+        "precip_mm": 1.6,
+        "precip_prob": 78,
+        "weathercode": 51
+      },
+      {
+        "date": "2026-10-24",
+        "precip_mm": 2.8,
+        "precip_prob": 86,
+        "weathercode": 53
+      },
+      {
+        "date": "2026-10-25",
         "precip_mm": null,
         "precip_prob": null,
         "weathercode": null
       }
     ],
     "model": "ecmwf_ifs025",
-    "fetched_at": "2026-10-07T11:32:04.160Z",
-    "from_cache": true
+    "fetched_at": "2026-10-11T02:28:17.756Z",
+    "from_cache": false
   },
   "ensemble_2day": [
     {
-      "label": "Tomorrow",
-      "date": "2026-10-10",
-      "mean_mm": 4.6,
-      "p75_mm": 5
+      "label": "Today",
+      "date": "2026-10-11",
+      "mean_mm": 2.7,
+      "p75_mm": 3.2
     },
     {
-      "label": "Day after",
-      "date": "2026-10-11",
-      "mean_mm": 1.6,
+      "label": "Tomorrow",
+      "date": "2026-10-12",
+      "mean_mm": 1.5,
       "p75_mm": 2.3
+    },
+    {
+      "label": null,
+      "date": "2026-10-13",
+      "mean_mm": 3.8,
+      "p75_mm": 3.4
     }
   ],
-  "daily_narrative": "Kaguguta Agrifarm weather station recorded 16.80 mm of rain on 7 October, the heaviest day of the past five, following 5.04 mm on 6 October and only light rain of 0.56 mm on 5 and 8 October. No data was available for yesterday, and the station has one consecutive dry day logged. The first dekad of October has accumulated 24.1 mm, which is also the month-to-date total. The ECMWF ensemble forecast indicates a mean of 4.6 mm for 10 October, with a 75th percentile of 5 mm, and a mean of 1.6 mm for 11 October, with a 75th percentile of 2.3 mm.",
-  "dekadal_narrative": "Rainfall recorded at Kaguguta Agrifarm totalled 37.1mm across 6 rainy days, below the 74.5mm of the second dekad of September and above the 10.6mm of the first, bringing the September total to 122.2mm against a long-term Kilifi climatology of about 35mm. The total was driven mainly by two days: 27 September contributed 20.2mm, the heaviest day, with a peak 2-hour accumulation of 8.7mm, and 21 September added 15.0mm, while the remaining days were dry or recorded 1.1mm or less. The forecast for the next dekad points to a much wetter spell, with 137.3mm expected in total and the largest daily amount, 28.6mm, on 8 October. On the regional scale, a positive Indian Ocean Dipole, a pattern that normally enhances rainfall over East Africa, is expected to develop alongside a strengthening El Niño according to the WMO, and the Kenya Meteorological Service Authority forecasts above-average October to December short rains, naming Kilifi among the counties expected to be wetter than normal."
+  "daily_narrative": "Kaguguta Agrifarm weather station recorded 9.80 mm of rain on 10 Oct, the second-largest daily amount of the dekad that closed that day. Oct-D1 2026 ended with a total of 33.9 mm, and rain fell on six days, four of them with more than 1 mm. The total came mainly from a few events. The 5–7 Oct window produced 22.4 mm, and 7 Oct alone contributed 16.8 mm, roughly half of the dekad's rain. The reading on 10 Oct added a further 9.80 mm, so these two events together account for about three-quarters of the total. Between them, 2–4 Oct and 9 Oct were dry, so the rain came in short episodes and was not spread evenly. The dekad total is roughly half of what October typically brings in a full month, which is a solid start to the season. It also fits the regional picture: the Kenya Meteorological Service declared the October–December short rains underway on 5 Oct, with rain reported in parts of the Coast. A positive Indian Ocean Dipole warms the western Indian Ocean and increases rainfall on the East African coast, and together with a strengthening El Niño it is the usual driver of enhanced short rains. The Australian Bureau of Meteorology still classes the dipole as neutral, with weekly index values of about +0.6 to +0.76 °C, and WMO expects the positive phase to peak in October. The ECMWF forecast points to a wetter dekad ahead, with a total of about 70 mm, which is roughly as much as October typically delivers in a full month. Rainfall is expected to build from light amounts at the start to a sharp peak around 14–15 Oct, which should b"
 }
